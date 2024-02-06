@@ -5,17 +5,11 @@ using UnityEngine;
 public class DragScript : MonoBehaviour
 {
     [SerializeField] SpriteRenderer spriteRenderer;
-    public Vector3 LoadedPos;
     float startPosx;
     float startPosY;
     bool isBeingHeld = false;
-    public bool isInLine;
-    float timelinePosY;
-
-    private void Start()
-    {
-        LoadedPos = this.transform.position;
-    }
+    public bool isIn;
+    Vector3 HitBoxPos;
 
     private void Update()
     {
@@ -47,24 +41,24 @@ public class DragScript : MonoBehaviour
     {
         spriteRenderer.color = new Color(1f, 1f, 1f, 1f);
         isBeingHeld = false;
-        if (isInLine)
-            this.gameObject.transform.position = new Vector3(this.gameObject.transform.localPosition.x, timelinePosY, -1f);
-        else
-            this.gameObject.transform.position = LoadedPos;
+        if (isIn)
+            this.gameObject.transform.position = HitBoxPos;
+        else if (isIn == false)
+            this.gameObject.transform.position = HitBoxPos;
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("TimeLine"))
+        if (other.gameObject.CompareTag("HitBox"))
         {
-            isInLine = true;
-            timelinePosY = other.transform.position.y;
+            isIn = true;
+            HitBoxPos = other.transform.position;
         }
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("TimeLine"))
+        if (other.CompareTag("HitBox"))
         {
-            isInLine = false;
+            isIn = false;
         }
     }
 }
