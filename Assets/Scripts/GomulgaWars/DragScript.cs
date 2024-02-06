@@ -56,7 +56,7 @@ public class DragScript : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("HitBox"))
+        if (other.gameObject.CompareTag("HitBox"))
         {
             isIn = false;
         }
