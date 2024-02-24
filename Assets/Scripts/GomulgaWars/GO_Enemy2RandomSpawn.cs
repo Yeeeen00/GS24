@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy2RandomSpawn : MonoBehaviour
+public class GO_Enemy2RandomSpawn : MonoBehaviour
 {
     //public GameObject prefabs;
     public int count;

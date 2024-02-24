@@ -2,17 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class BI_ButtonManager : MonoBehaviour
 {
     [SerializeField] List<GameObject> list = new List<GameObject>();
-    [SerializeField] List<GameObject> SauceBtn = new List<GameObject>();
-    [SerializeField]List<GameObject> Sauce=new List<GameObject>();
+    [SerializeField]List<GameObject> Sauce = new List<GameObject>();
+    [SerializeField] List<GameObject> _Rice = new List<GameObject>();
+    string BtnDuplicationClickCheck;
+    string ObjName;
+    string ObjTag;
+    List<GameObject> ChangeList;
+    int _count = 0;
     int Count=0;
     public static int Point = 0;
-    bool check=false;
+    bool BtnClickcheck = false;
+    bool check=true;
+
+
+
     public GameObject NextBtn;
     public GameObject GoSari;
     public GameObject Beef;
@@ -28,7 +36,14 @@ public class BI_ButtonManager : MonoBehaviour
     public GameObject MakeRice;
     public GameObject Gomyung;
     public GameObject MakeSauce;
-    
+    private void Reset()
+    {
+        _count = 0;
+        check = true;
+        BtnDuplicationClickCheck="?";
+        ObjName="?";
+        ObjTag="?";
+    }
     public void PointCheck()
     {
         if(Point >= 5)
@@ -42,72 +57,74 @@ public class BI_ButtonManager : MonoBehaviour
     }
     public void NextBtnOnclick()
     {
-        if(Count == 1)
-        {
-            Gomyung.SetActive(false) ;
-            MakeSauce.SetActive(true);
-            check = false;
-            Count++;
-        }
+        Reset();
         if (Count == 0)
         {
             MakeRice.SetActive(false);
             Gomyung.SetActive(true);
-            check = false;
+            BtnClickcheck = false;
+            Count++;
+        }
+        else if (Count == 1)
+        {
+            Gomyung.SetActive(false) ;
+            MakeSauce.SetActive(true);
+            BtnClickcheck = false;
+            ChangeList = Sauce;
             Count++;
         }
     }
     private void Start()
     {
-        
+        ChangeList = _Rice;
     }
     private void Update()
     {
-        if(check==true)
+        if(BtnClickcheck == true)
         {
             NextBtn.SetActive(true);
         }
-        if(check==false)
+        if(BtnClickcheck ==false)
         { NextBtn.SetActive(false); }
     }
-
-    public void Rice()
+    public void BtnOnClick()
     {
-        SavedData.Ins.curRice = global::Rice.WhiteRice;
-        rice.color = new Color(1f, 1f, 1f, .1f);
-        check = true;
-    }
-    public void KongRice()
-    {
-        SavedData.Ins.curRice = global::Rice.BeanRice;
-        rice.color = new Color(1f, 0.92f, 0.016f, .1f);
-        check = true;
-    }
-    public void BrownRice()
-    {
-        SavedData.Ins.curRice = global::Rice.HyunMeRice;
-        rice.color = new Color(1f, 0f, 1f, .1f);
-        check = true;
-    }
-    public void _SauceBtn() {
-        check = true;
-        foreach (GameObject go in SauceBtn)
-        {
-             if(go.gameObject.name=="ºÒ´ß¼Ò½º")
-            {
-                foreach (GameObject gu in Sauce)
-                {
-                    if (gu.gameObject.name == "Sauce")
-                    {
-                        gu.SetActive(true);
-                    }
+        BtnClickcheck = true;
+        GameObject clickBtnObject = EventSystem.current.currentSelectedGameObject;
+        if (check == true){
+            if (_count >= 1){
+                if (clickBtnObject.tag != ObjTag){
+                    GameObject.Find(ObjName).SetActive(false);
                 }
             }
         }
+        if (clickBtnObject.tag != BtnDuplicationClickCheck){
+            foreach (GameObject go in ChangeList){
+                if (go.tag == clickBtnObject.tag){
+                    go.SetActive(true);
+                    BtnDuplicationClickCheck = clickBtnObject.tag;
+                    ObjTag = go.tag;
+                    ObjName = go.name;
+                    check = true;
+                    _count++;
+                }
+            }
+        }
+        else if (clickBtnObject.tag == BtnDuplicationClickCheck){
+            foreach (GameObject go in ChangeList)
+            {
+                if (go.tag == clickBtnObject.tag){
+                    go.SetActive(false);
+                    check = false;
+                    BtnDuplicationClickCheck = "NULL";
+                }
+            }
+        }
+        
     }
     public void Btn()
     {
-        check = true;
+        BtnClickcheck = true;
         GameObject clickBtnObject = EventSystem.current.currentSelectedGameObject;
         foreach (GameObject go in list)
         {

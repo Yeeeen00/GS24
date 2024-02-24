@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Enemy2Script : MonoBehaviour
+public class GO_Enemy2Script : MonoBehaviour
 {
     GameObject pobj;
     bool enemyCheck = true;
@@ -15,7 +15,7 @@ public class Enemy2Script : MonoBehaviour
     Vector3 Enemy2Move;
 
     private void Start(){
-        M_num += PlayerScript.P_num + Random.Range(-6, 7);
+        M_num += GO_PlayerScript.P_num + Random.Range(-6, 7);
     }
     private void Update(){
         M_text.text = M_num.ToString();
@@ -34,11 +34,11 @@ public class Enemy2Script : MonoBehaviour
             }
         }
         //놓았을때
-        if (DragHandler.Boxbool == true){
+        if (GO_DragHandler.Boxbool == true){
             GetComponent<BoxCollider2D>().enabled = true;
         }
         //드래그할때
-        if (DragHandler.Boxbool == false){
+        if (GO_DragHandler.Boxbool == false){
             GetComponent<BoxCollider2D>().enabled = false;
         }
     }

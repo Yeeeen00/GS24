@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems; 
 
-public class DragHandler : MonoBehaviour, IDragHandler,IBeginDragHandler,IEndDragHandler
+public class GO_DragHandler : MonoBehaviour, IDragHandler,IBeginDragHandler,IEndDragHandler
 {
     public static bool Boxbool;
     public static GameObject beingDraggedPlayer;

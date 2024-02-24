@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EnemyScript : MonoBehaviour
+public class GO_EnemyScript : MonoBehaviour
 {
     GameObject pobj;
     bool enemyCheck = true; 
@@ -11,7 +11,7 @@ public class EnemyScript : MonoBehaviour
     public Text M_text;
 
     private void Start(){
-        M_num += PlayerScript.P_num + Random.Range(-6, 7);
+        M_num += GO_PlayerScript.P_num + Random.Range(-6, 7);
     }
     private void Update(){
         M_text.text = M_num.ToString();
@@ -24,10 +24,10 @@ public class EnemyScript : MonoBehaviour
             }
             enemyCheck = false;
         }
-        if (DragHandler.Boxbool == true){
+        if (GO_DragHandler.Boxbool == true){
             GetComponent<BoxCollider2D>().enabled = true;
         }
-        if (DragHandler.Boxbool == false){
+        if (GO_DragHandler.Boxbool == false){
             GetComponent<BoxCollider2D>().enabled = false;
         }
     }

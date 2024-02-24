@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GO_GameManager : MonoBehaviour
 {
     public GameObject SucsesImage;
     public GameObject GameOverImage;

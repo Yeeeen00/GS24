@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class SlotScript : MonoBehaviour, IDropHandler
+public class GO_SlotScript : MonoBehaviour, IDropHandler
 {
     GameObject Player()
     {
@@ -15,9 +15,9 @@ public class SlotScript : MonoBehaviour, IDropHandler
     public void OnDrop(PointerEventData eventData)
     {
         if (Player() == null) { 
-            DragHandler.beingDraggedPlayer.transform.SetParent(transform);
-            DragHandler.beingDraggedPlayer.transform.position = transform.position;
-            DragHandler.Boxbool = true;
+            GO_DragHandler.beingDraggedPlayer.transform.SetParent(transform);
+            GO_DragHandler.beingDraggedPlayer.transform.position = transform.position;
+            GO_DragHandler.Boxbool = true;
         }
     }
 }
