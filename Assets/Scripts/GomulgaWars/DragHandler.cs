@@ -21,7 +21,6 @@ public class DragHandler : MonoBehaviour, IDragHandler,IBeginDragHandler,IEndDra
             transform.SetParent(startParent);
         }
     }
-
     public void OnBeginDrag(PointerEventData eventData)
     {
         beingDraggedPlayer = gameObject;
