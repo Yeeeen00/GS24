@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 35473468}
   m_Layer: 5
   m_Name: "\uBD80\uCD94"
-  m_TagString: Untagged
+  m_TagString: Boochu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -696,7 +696,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 604922865}
         m_TargetAssemblyTypeName: BI_ButtonManager, Assembly-CSharp
-        m_MethodName: Rice
+        m_MethodName: BtnOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -758,7 +758,7 @@ GameObject:
   - component: {fileID: 167940844}
   m_Layer: 5
   m_Name: "\uBD80\uCD94"
-  m_TagString: Untagged
+  m_TagString: Boochu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -829,8 +829,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 604922865}
-        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: Btn
+        m_TargetAssemblyTypeName: BI_ButtonManager, Assembly-CSharp
+        m_MethodName: BtnOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -891,7 +891,7 @@ GameObject:
   - component: {fileID: 175555350}
   m_Layer: 5
   m_Name: "\uB3FC\uC9C0\uACE0\uAE30"
-  m_TagString: Untagged
+  m_TagString: Pork
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -967,7 +967,7 @@ GameObject:
   - component: {fileID: 184526372}
   m_Layer: 5
   m_Name: "\uC560\uD638\uBC15"
-  m_TagString: Untagged
+  m_TagString: LittlePumpkin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1043,7 +1043,7 @@ GameObject:
   - component: {fileID: 197728246}
   m_Layer: 5
   m_Name: "\uC2DC\uAE08\uCE58"
-  m_TagString: Untagged
+  m_TagString: Spinach
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1120,7 +1120,7 @@ GameObject:
   - component: {fileID: 224547546}
   m_Layer: 5
   m_Name: "\uB2F9\uADFC"
-  m_TagString: Untagged
+  m_TagString: Carrot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1191,8 +1191,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 604922865}
-        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: Btn
+        m_TargetAssemblyTypeName: BI_ButtonManager, Assembly-CSharp
+        m_MethodName: BtnOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1326,7 +1326,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 604922865}
         m_TargetAssemblyTypeName: BI_ButtonManager, Assembly-CSharp
-        m_MethodName: Rice
+        m_MethodName: BtnOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1460,7 +1460,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 604922865}
         m_TargetAssemblyTypeName: BI_ButtonManager, Assembly-CSharp
-        m_MethodName: Rice
+        m_MethodName: BtnOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1853,7 +1853,7 @@ GameObject:
   - component: {fileID: 479876070}
   m_Layer: 5
   m_Name: "\uAC01\uC124\uD0D5"
-  m_TagString: Untagged
+  m_TagString: Sugar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1872,7 +1872,7 @@ RectTransform:
   m_Children:
   - {fileID: 66135505}
   m_Father: {fileID: 1058587749}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1924,8 +1924,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 604922865}
-        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: Btn
+        m_TargetAssemblyTypeName: BI_ButtonManager, Assembly-CSharp
+        m_MethodName: BtnOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2059,7 +2059,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 604922865}
         m_TargetAssemblyTypeName: BI_ButtonManager, Assembly-CSharp
-        m_MethodName: Rice
+        m_MethodName: BtnOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2200,7 +2200,7 @@ GameObject:
   - component: {fileID: 496930702}
   m_Layer: 5
   m_Name: "\uAE40\uCE58"
-  m_TagString: Untagged
+  m_TagString: Kimchi
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2276,7 +2276,7 @@ GameObject:
   - component: {fileID: 498393966}
   m_Layer: 5
   m_Name: "\uACE0\uC0AC\uB9AC"
-  m_TagString: Untagged
+  m_TagString: GoSari
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2588,17 +2588,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe3e9e769f0251d4fa98b8f6cbe93bd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  list:
-  - {fileID: 1479193360}
-  - {fileID: 479876068}
-  - {fileID: 1485309697}
-  - {fileID: 224547544}
-  - {fileID: 167940842}
-  - {fileID: 1569302652}
-  - {fileID: 2063896405}
-  - {fileID: 868887684}
-  - {fileID: 1737610211}
-  - {fileID: 1968233784}
+  GomyungList:
+  - {fileID: 498393964}
+  - {fileID: 1577134575}
+  - {fileID: 175555348}
+  - {fileID: 1656884206}
+  - {fileID: 197728244}
+  - {fileID: 1965306093}
+  - {fileID: 35473466}
+  - {fileID: 496930700}
+  - {fileID: 1711477271}
+  - {fileID: 184526370}
   Sauce:
   - {fileID: 2035385252}
   - {fileID: 540638339}
@@ -2608,17 +2608,6 @@ MonoBehaviour:
   - {fileID: 1298607946}
   - {fileID: 762633134}
   NextBtn: {fileID: 76785456}
-  GoSari: {fileID: 498393964}
-  Beef: {fileID: 1577134575}
-  Pork: {fileID: 175555348}
-  Sugar: {fileID: 1656884206}
-  Spinach: {fileID: 197728244}
-  Carrot: {fileID: 1965306093}
-  Boochu: {fileID: 35473466}
-  Kimchi: {fileID: 496930700}
-  GreenOnionChecks: {fileID: 1711477271}
-  LittlePumpkin: {fileID: 184526370}
-  rice: {fileID: 347605829}
   MakeRice: {fileID: 2100196640}
   Gomyung: {fileID: 1058587748}
   MakeSauce: {fileID: 989455834}
@@ -2803,7 +2792,7 @@ GameObject:
   - component: {fileID: 868887686}
   m_Layer: 5
   m_Name: "\uC560\uD638\uBC15"
-  m_TagString: Untagged
+  m_TagString: LittlePumpkin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2874,8 +2863,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 604922865}
-        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: Btn
+        m_TargetAssemblyTypeName: BI_ButtonManager, Assembly-CSharp
+        m_MethodName: BtnOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3176,9 +3165,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1485309698}
   - {fileID: 1479193361}
   - {fileID: 479876069}
-  - {fileID: 1485309698}
   - {fileID: 224547545}
   - {fileID: 167940843}
   - {fileID: 1569302653}
@@ -4125,7 +4114,7 @@ GameObject:
   - component: {fileID: 1479193362}
   m_Layer: 5
   m_Name: "\uB3FC\uC9C0\uACE0\uAE30"
-  m_TagString: Untagged
+  m_TagString: Pork
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4144,7 +4133,7 @@ RectTransform:
   m_Children:
   - {fileID: 1082266639}
   m_Father: {fileID: 1058587749}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4196,8 +4185,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 604922865}
-        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: Btn
+        m_TargetAssemblyTypeName: BI_ButtonManager, Assembly-CSharp
+        m_MethodName: BtnOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4259,7 +4248,7 @@ GameObject:
   - component: {fileID: 1485309699}
   m_Layer: 5
   m_Name: "\uC2DC\uAE08\uCE58"
-  m_TagString: Untagged
+  m_TagString: Spinach
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4278,7 +4267,7 @@ RectTransform:
   m_Children:
   - {fileID: 1183009018}
   m_Father: {fileID: 1058587749}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4330,8 +4319,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 604922865}
-        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: Btn
+        m_TargetAssemblyTypeName: BI_ButtonManager, Assembly-CSharp
+        m_MethodName: BtnOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4393,7 +4382,7 @@ GameObject:
   - component: {fileID: 1569302654}
   m_Layer: 5
   m_Name: "\uAE40\uCE58"
-  m_TagString: Untagged
+  m_TagString: Kimchi
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4464,8 +4453,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 604922865}
-        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: Btn
+        m_TargetAssemblyTypeName: BI_ButtonManager, Assembly-CSharp
+        m_MethodName: BtnOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4526,7 +4515,7 @@ GameObject:
   - component: {fileID: 1577134577}
   m_Layer: 5
   m_Name: "\uC18C\uACE0\uAE30"
-  m_TagString: Untagged
+  m_TagString: Beef
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4602,7 +4591,7 @@ GameObject:
   - component: {fileID: 1656884208}
   m_Layer: 5
   m_Name: "\uAC01\uC124\uD0D5"
-  m_TagString: Untagged
+  m_TagString: Sugar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4758,7 +4747,7 @@ GameObject:
   - component: {fileID: 1711477273}
   m_Layer: 5
   m_Name: "\uD30C\uB9DB\uCCB5\uC2A4"
-  m_TagString: Untagged
+  m_TagString: GreenOnionChecks
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4915,7 +4904,7 @@ GameObject:
   - component: {fileID: 1737610213}
   m_Layer: 5
   m_Name: "\uACE0\uC0AC\uB9AC"
-  m_TagString: Untagged
+  m_TagString: GoSari
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4986,8 +4975,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 604922865}
-        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: Btn
+        m_TargetAssemblyTypeName: BI_ButtonManager, Assembly-CSharp
+        m_MethodName: BtnOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5205,7 +5194,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 604922865}
         m_TargetAssemblyTypeName: BI_ButtonManager, Assembly-CSharp
-        m_MethodName: Rice
+        m_MethodName: BtnOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5339,7 +5328,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 604922865}
         m_TargetAssemblyTypeName: BI_ButtonManager, Assembly-CSharp
-        m_MethodName: Rice
+        m_MethodName: BtnOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5400,7 +5389,7 @@ GameObject:
   - component: {fileID: 1965306095}
   m_Layer: 5
   m_Name: "\uB2F9\uADFC"
-  m_TagString: Untagged
+  m_TagString: Carrot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5477,7 +5466,7 @@ GameObject:
   - component: {fileID: 1968233786}
   m_Layer: 5
   m_Name: "\uC18C\uACE0\uAE30"
-  m_TagString: Untagged
+  m_TagString: Beef
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5548,8 +5537,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 604922865}
-        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: Btn
+        m_TargetAssemblyTypeName: BI_ButtonManager, Assembly-CSharp
+        m_MethodName: BtnOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5687,7 +5676,7 @@ GameObject:
   - component: {fileID: 2063896407}
   m_Layer: 5
   m_Name: "\uD30C\uB9DB\uCCB5\uC2A4"
-  m_TagString: Untagged
+  m_TagString: GreenOnionChecks
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5758,8 +5747,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 604922865}
-        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: Btn
+        m_TargetAssemblyTypeName: BI_ButtonManager, Assembly-CSharp
+        m_MethodName: BtnOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
