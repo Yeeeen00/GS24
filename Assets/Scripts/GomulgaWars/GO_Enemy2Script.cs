@@ -15,7 +15,7 @@ public class GO_Enemy2Script : MonoBehaviour
     Vector3 Enemy2Move;
 
     private void Start(){
-        M_num += GO_PlayerScript.P_num + Random.Range(-6, 7);
+        M_num += GO_PlayerScript.P_num + Random.Range(-5, 7);
     }
     private void Update(){
         M_text.text = M_num.ToString();
@@ -30,7 +30,7 @@ public class GO_Enemy2Script : MonoBehaviour
         }
         if(Enemy == true) {
             if (col==false){
-                transform.localPosition = Vector3.MoveTowards(gameObject.transform.localPosition, Enemy2Move, 1f);
+                transform.localPosition = Vector3.MoveTowards(transform.localPosition, Enemy2Move, 0.7f);
             }
         }
         //놓았을때

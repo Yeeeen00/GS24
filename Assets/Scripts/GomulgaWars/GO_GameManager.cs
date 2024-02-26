@@ -9,17 +9,13 @@ public class GO_GameManager : MonoBehaviour
     private bool Isclear = true;
 
     // Update is called once per frame
-    void Update()
-    {
-        if (Isclear == true)
-        {
-            if (GameObject.FindGameObjectWithTag("Enemy") == null && GameObject.FindGameObjectWithTag("Enemy2") == null)
-            {
+    void Update(){
+        if (Isclear == true){
+            if (GameObject.FindGameObjectWithTag("Enemy") == null && GameObject.FindGameObjectWithTag("Enemy2") == null){
                 SucsesImage.SetActive(true);
                 Isclear = false;
             }
-            if (GameObject.FindGameObjectWithTag("Player") == false)
-            {
+            if (GameObject.FindGameObjectWithTag("Player") == false){
                 GameOverImage.SetActive(true);
                 Isclear= false;
             }

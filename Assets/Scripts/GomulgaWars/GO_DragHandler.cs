@@ -31,7 +31,9 @@ public class GO_DragHandler : MonoBehaviour, IDragHandler,IBeginDragHandler,IEnd
     }
     public void OnDrag(PointerEventData eventData)
     {
-        Boxbool = false;
-        transform.position = Input.mousePosition;
+        if (GO_PlayerScript.IsDrag != false){
+            Boxbool = false;
+            transform.position = Input.mousePosition;
+        }
     }
 }

@@ -1,44 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GO_Enemy2RandomSpawn : MonoBehaviour
 {
-    //public GameObject prefabs;
+    public GameObject prefabs;
     public int count;
     private int RandTransform;
-    private float[,] Enemy2transform = new float[2,4];
+    [SerializeField]List<GameObject> Enemy = new List<GameObject>();
+    Vector3[]EnemyPosition = new Vector3[10];
 
     // Start is called before the first frame update
-    private void Awake()
-    {
-        //count = Random.Range(1, 4);
-        //for(int i = 0; i < 2; i++)
-        //{
-        //    Enemy2transform[i, 0] =transform.localPosition.x
-        //    for (int j = 0; j < 4; j++)
-        //    {
-                
-        //    }
-        //}
-        
+    void Start(){
+        count = Random.Range(4, 8);
+        int num = 0;
+        foreach (GameObject obj in Enemy){
+            EnemyPosition[num] = obj.transform.position;
+            EnemyPosition[num].x += 160;
+            num++;
+        }
+        Spawn(count);
     }
-    void Start()
+    void Spawn(int count)
     {
-        //for (int i = 0; i < count; ++i)
-        //{
-        //    Spawn();
-        //}
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    void Spawn()
-    {
-        //Instantiate(prefabs);
-        
+        int randpos;
+        for (int i = 0; i < count; i++) {
+            randpos = Random.Range(0, 10);
+            Instantiate(prefabs, EnemyPosition[randpos],Quaternion.identity,GameObject.Find("MainPanel").transform);
+        }
     }
 }

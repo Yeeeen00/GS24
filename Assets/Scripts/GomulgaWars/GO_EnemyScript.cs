@@ -13,14 +13,15 @@ public class GO_EnemyScript : MonoBehaviour
     private void Start(){
         M_num += GO_PlayerScript.P_num + Random.Range(-6, 7);
     }
+
     private void Update(){
         M_text.text = M_num.ToString();
         if (enemyCheck!=false){
-            if (gameObject.transform.localPosition.x >= 650) {
-                M_num += Random.Range(7, 15);
+            if (gameObject.transform.localPosition.x >= 530) {
+                M_num += Random.Range(6, 14);
             }
-            if(gameObject.transform.localPosition.y >= 300) {
-                M_num += Random.Range(5, 10);
+            if(gameObject.transform.localPosition.y >= 280) {
+                M_num += Random.Range(4, 9);
             }
             enemyCheck = false;
         }
