@@ -22,6 +22,14 @@ TagManager:
   - LittlePumpkin
   - GoSari
   - Beef
+  - Btn
+  - If
+  - Move
+  - Action
+  - Sub
+  - Input1
+  - Input2
+  - input3
   layers:
   - Default
   - TransparentFX
