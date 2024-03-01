@@ -5,6 +5,11 @@ using UnityEngine.EventSystems;
 
 public class GO_SlotScript : MonoBehaviour, IDropHandler
 {
+    public AudioClip DropSound;
+    AudioSource GameSound;
+    void Start(){
+        GameSound = GetComponent<AudioSource>();
+    }
     GameObject Player()
     {
         if (transform.childCount > 0) {
@@ -18,6 +23,7 @@ public class GO_SlotScript : MonoBehaviour, IDropHandler
             GO_DragHandler.beingDraggedPlayer.transform.SetParent(transform);
             GO_DragHandler.beingDraggedPlayer.transform.position = transform.position;
             GO_DragHandler.Boxbool = true;
+            GameSound.PlayOneShot(DropSound);
         }
     }
 }

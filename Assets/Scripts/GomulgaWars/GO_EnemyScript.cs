@@ -9,9 +9,15 @@ public class GO_EnemyScript : MonoBehaviour
     bool enemyCheck = true; 
     public int M_num = 0;
     public Text M_text;
+    public static bool Enemy2Col;
+    public Sprite[] sprites;
+    BoxCollider2D box;
 
     private void Start(){
-        M_num += GO_PlayerScript.P_num + Random.Range(-6, 7);
+        M_num += GO_PlayerScript.P_num + Random.Range(-4, 5);
+        box = GetComponent<BoxCollider2D>();
+        int randnumber = Random.Range(0, 11);
+        GetComponent<Image>().sprite = sprites[randnumber];
     }
 
     private void Update(){
@@ -25,11 +31,7 @@ public class GO_EnemyScript : MonoBehaviour
             }
             enemyCheck = false;
         }
-        if (GO_DragHandler.Boxbool == true){
-            GetComponent<BoxCollider2D>().enabled = true;
-        }
-        if (GO_DragHandler.Boxbool == false){
-            GetComponent<BoxCollider2D>().enabled = false;
-        }
+        if (GO_DragHandler.Boxbool == true) box.enabled = true;
+        if (GO_DragHandler.Boxbool == false) box.enabled = false;
     }
 }

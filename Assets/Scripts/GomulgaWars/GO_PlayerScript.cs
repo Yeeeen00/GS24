@@ -5,22 +5,26 @@ using UnityEngine.UI;
 
 public class GO_PlayerScript : MonoBehaviour
 {
-    public static bool IsDrag = true;
-    bool IsMove = true;
+    bool Enemy2Exist = false;
+    public static bool IsDrag;
+    bool IsMove;
     public static int P_num = 0;
     public Text P_text;
     int Numsum=0;
     Collider2D Collider;
+    Collider2D Collider2;
 
     private void Awake(){
-        P_num += Random.Range(4, 10);
+        P_num += Random.Range(5, 10);
+        IsDrag = true;
+        IsMove = true;
     }
     private void Update(){
         P_text.text = P_num.ToString();
-        if (IsMove!=false){
+        if (IsMove == true){
             IsDrag = true;
         }
-        if (IsMove != true){
+        if (IsMove == false){
             IsDrag = false;
         }
     }
@@ -30,23 +34,24 @@ public class GO_PlayerScript : MonoBehaviour
             IsMove = false;
             Invoke("EnemyFight", 2);
         }
-        if(collision.tag =="Enemy2"){
-            Collider=collision;
+        if (collision.tag == "Enemy2")
+        {
+            Collider2 = collision;
+            Enemy2Exist = true;
             IsMove = false;
-            Invoke("Enemy2Fight", 2);
         }
     }
-    public void EnemyFight() {
+    public void EnemyFight(){
         if (Collider.GetComponent<GO_EnemyScript>().M_num < P_num){
-            if (Collider.name == GO_Enemy2Script.EnemyName){
+            if (Enemy2Exist == true) {
                 Numsum += Collider.GetComponent<GO_EnemyScript>().M_num;
+                Invoke("Enemy2Fight", 2);
             }
-            else if(Collider.name != GO_Enemy2Script.EnemyName){
+            else {
                 P_num += Collider.GetComponent<GO_EnemyScript>().M_num;
                 IsMove = true;
             }
             Destroy(Collider.gameObject);
-            
         }
         if (Collider.GetComponent<GO_EnemyScript>().M_num > P_num){
             Destroy(gameObject);
@@ -57,17 +62,18 @@ public class GO_PlayerScript : MonoBehaviour
         }
     }
     public void Enemy2Fight(){
-        if (Collider.GetComponent<GO_Enemy2Script>().M_num < P_num){
-            P_num += Collider.GetComponent<GO_Enemy2Script>().M_num + Numsum;
-            Destroy(Collider.gameObject);
+        if (Collider2.GetComponent<GO_Enemy2Script>().M_num < P_num){
+            P_num += Collider2.GetComponent<GO_Enemy2Script>().M_num + Numsum;
+            Destroy(Collider2.gameObject);
+            Enemy2Exist = false;
             Numsum = 0;
-            IsMove =true;
+            IsMove = true;
         }
-        if (Collider.GetComponent<GO_Enemy2Script>().M_num > P_num){
+        if (Collider2.GetComponent<GO_Enemy2Script>().M_num > P_num){
             Destroy(gameObject);
         }
-        if (Collider.GetComponent<GO_Enemy2Script>().M_num == P_num){
-            Destroy(Collider.gameObject);
+        if (Collider2.GetComponent<GO_Enemy2Script>().M_num == P_num){
+            Destroy(Collider2.gameObject);
             Destroy(gameObject);
         }
     }

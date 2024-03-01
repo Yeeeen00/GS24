@@ -6,7 +6,15 @@ public class GO_GameManager : MonoBehaviour
 {
     public GameObject SucsesImage;
     public GameObject GameOverImage;
+    public GameObject GameOverPanel;
+    public AudioClip GameOverSound;
+    AudioSource GameAudio;
     private bool Isclear = true;
+
+    private void Start()
+    {
+        GameAudio = GetComponent<AudioSource>();
+    }
 
     // Update is called once per frame
     void Update(){
@@ -17,6 +25,8 @@ public class GO_GameManager : MonoBehaviour
             }
             if (GameObject.FindGameObjectWithTag("Player") == false){
                 GameOverImage.SetActive(true);
+                GameOverPanel.SetActive(true);
+                GameAudio.PlayOneShot(GameOverSound);
                 Isclear= false;
             }
         }

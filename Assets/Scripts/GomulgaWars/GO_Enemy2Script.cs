@@ -5,49 +5,47 @@ using UnityEngine.UI;
 
 public class GO_Enemy2Script : MonoBehaviour
 {
-    GameObject pobj;
+    bool Enemy = false;
     bool enemyCheck = true;
+    public Sprite[] sprites;
     public int M_num = 0;
     public Text M_text;
-    public static string EnemyName;
-    bool Enemy = false;
+    GameObject pobj;
     Collider2D col;
     Vector3 Enemy2Move;
+    BoxCollider2D box;
+    
 
     private void Start(){
-        M_num += GO_PlayerScript.P_num + Random.Range(-5, 7);
+        M_num += GO_PlayerScript.P_num + Random.Range(-3, 7);
+        box = GetComponent<BoxCollider2D>();
+        int randnumber = Random.Range(0, 11);
+        GetComponent<Image>().sprite = sprites[randnumber];
     }
     private void Update(){
         M_text.text = M_num.ToString();
         if (enemyCheck != false){
-            if (gameObject.transform.localPosition.x >= 650){
+            if (gameObject.transform.localPosition.x >= 530){
                 M_num += Random.Range(7, 15);
             }
-            if (gameObject.transform.localPosition.y >= 300){
+            if (gameObject.transform.localPosition.y >= 280){
                 M_num += Random.Range(5, 10);
             }
             enemyCheck = false;
         }
-        if(Enemy == true) {
-            if (col==false){
+        if (Enemy == true)
+            if (col == false)
                 transform.localPosition = Vector3.MoveTowards(transform.localPosition, Enemy2Move, 0.7f);
-            }
-        }
-        //놓았을때
-        if (GO_DragHandler.Boxbool == true){
-            GetComponent<BoxCollider2D>().enabled = true;
-        }
-        //드래그할때
-        if (GO_DragHandler.Boxbool == false){
-            GetComponent<BoxCollider2D>().enabled = false;
-        }
+        if (GO_DragHandler.Boxbool == true) box.enabled = true;
+        if (GO_DragHandler.Boxbool == false) box.enabled = false;
     }
-    public void OnTriggerEnter2D(Collider2D collision){
-        col = collision;
-        if (col.tag == "Enemy"){
-            EnemyName = col.name;
-            Enemy2Move = col.transform.localPosition;
-            Enemy = true;
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Enemy")
+        {
+            Enemy2Move = collision.transform.localPosition;
+            col = collision;
+            Enemy=true;
         }
     }
 }
