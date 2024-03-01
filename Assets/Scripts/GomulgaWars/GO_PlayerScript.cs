@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,15 +10,21 @@ public class GO_PlayerScript : MonoBehaviour
     public static bool IsDrag;
     bool IsMove;
     public static int P_num = 0;
+    public static int SaveNum;
     public Text P_text;
     int Numsum=0;
     Collider2D Collider;
     Collider2D Collider2;
 
     private void Awake(){
-        P_num += Random.Range(5, 10);
+        GO_GameManager.Stage += 1;
+        if(GO_GameManager.Stage==1)
+            P_num = Random.Range(5, 10);
         IsDrag = true;
         IsMove = true;
+    }
+    private void Start(){
+        SaveNum = P_num;
     }
     private void Update(){
         P_text.text = P_num.ToString();

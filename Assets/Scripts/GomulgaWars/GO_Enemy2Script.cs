@@ -14,13 +14,17 @@ public class GO_Enemy2Script : MonoBehaviour
     Collider2D col;
     Vector3 Enemy2Move;
     BoxCollider2D box;
-    
+
+    private void Awake()
+    {
+        int randnumber = Random.Range(0, 11);
+        GetComponent<Image>().sprite = sprites[randnumber];
+        GetComponent<GO_ChangeImage>().EnemyAni = randnumber;
+    }
 
     private void Start(){
         M_num += GO_PlayerScript.P_num + Random.Range(-3, 7);
         box = GetComponent<BoxCollider2D>();
-        int randnumber = Random.Range(0, 11);
-        GetComponent<Image>().sprite = sprites[randnumber];
     }
     private void Update(){
         M_text.text = M_num.ToString();

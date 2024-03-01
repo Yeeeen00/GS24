@@ -12,12 +12,16 @@ public class GO_EnemyScript : MonoBehaviour
     public static bool Enemy2Col;
     public Sprite[] sprites;
     BoxCollider2D box;
+    public void Awake()
+    {
+        int randnumber = Random.Range(0, 11);
+        GetComponent<Image>().sprite = sprites[randnumber];
+        GetComponent<GO_ChangeImage>().EnemyAni = randnumber;
+    }
 
     private void Start(){
         M_num += GO_PlayerScript.P_num + Random.Range(-4, 5);
         box = GetComponent<BoxCollider2D>();
-        int randnumber = Random.Range(0, 11);
-        GetComponent<Image>().sprite = sprites[randnumber];
     }
 
     private void Update(){
@@ -25,9 +29,13 @@ public class GO_EnemyScript : MonoBehaviour
         if (enemyCheck!=false){
             if (gameObject.transform.localPosition.x >= 530) {
                 M_num += Random.Range(6, 14);
+                if (GO_GameManager.Stage >= 2)
+                    M_num *= Random.Range(1, 4);
             }
             if(gameObject.transform.localPosition.y >= 280) {
                 M_num += Random.Range(4, 9);
+                if (GO_GameManager.Stage >= 2)
+                    M_num *= Random.Range(1, 3);
             }
             enemyCheck = false;
         }
