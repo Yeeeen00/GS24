@@ -19,7 +19,6 @@ public class BI_ButtonManager : MonoBehaviour
     public static int Point = 0;
     bool BtnClickcheck = false;
     bool check=true;
-
     public GameObject NextBtn;
     public GameObject MakeRice;
     public GameObject Gomyung;
