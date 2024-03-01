@@ -24,7 +24,16 @@ public class BlockSlot : MonoBehaviour
         FreshSlot();
     }
 
-
+    public void initList()
+    {
+        if (itemList.Count > 0)
+        {
+            for (int i = itemList.Count; i > 0; i--)
+            {
+                DeleteItem();
+            }
+        }
+    }
     public void FreshSlot()
     {
         int i = 0;

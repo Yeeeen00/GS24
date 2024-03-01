@@ -6,12 +6,12 @@ using TMPro;
 
 public class score : MonoBehaviour
 {
-    public int Score;
+    public float Score;
     public TMP_Text text;
     // Start is called before the first frame update
     void Start()
     {
-        Score = 0;
+        Score = 0.0f;
     }
 
     // Update is called once per frame
@@ -19,14 +19,15 @@ public class score : MonoBehaviour
     {
         
     }
-    public int scoreSum(int s)
+    public float scoreSum(float s)
     {
-        //s = 100 - s; / 만약 시간 값을 보낼 시
+        s = 100 - s;
         Score += s;
+        showScore();
         return Score;
     }
     public void showScore()
     {
-        text.text = Score.ToString();
+        text.text = Mathf.Round(Score).ToString();
     }
 }
