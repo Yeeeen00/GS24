@@ -1,0 +1,1266 @@
+fileFormatVersion: 2
+guid: 7c13f66428db51840bce9098009a6d4d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: lord_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 13, y: 30}
+        - {x: -3, y: 24}
+        - {x: -17, y: 15}
+        - {x: -30, y: -11}
+        - {x: -30, y: -32}
+        - {x: -18, y: -32}
+        - {x: -8, y: -4}
+        - {x: 4, y: 8}
+        - {x: 32, y: 18}
+        - {x: 32, y: 30}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01fa01594e8cdec4f87519fe384df757
+      internalID: 2025383468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -32, y: 18}
+        - {x: 32, y: 18}
+        - {x: 32, y: 30}
+        - {x: -32, y: 30}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0a91b106ec42a64692101b2ad88c093
+      internalID: -749368751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -1, y: 26}
+        - {x: -16, y: 30}
+        - {x: -32, y: 30}
+        - {x: -32, y: 17}
+        - {x: -4, y: 8}
+        - {x: 7, y: -4}
+        - {x: 18, y: -32}
+        - {x: 30, y: -32}
+        - {x: 30, y: -1}
+        - {x: 20, y: 10}
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd3d317066fd8d44b89b93c9cae73bb7
+      internalID: 1705218426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 21, y: 10}
+        - {x: -10, y: -21}
+        - {x: -10, y: -32}
+        - {x: 2, y: -32}
+        - {x: 16, y: -16}
+        - {x: 32, y: -2}
+        - {x: 32, y: 10}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2611d8b95ab56694198b161023ef292a
+      internalID: -54141720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -11, y: 30}
+        - {x: -30, y: 20}
+        - {x: -32, y: 17}
+        - {x: -32, y: -2}
+        - {x: -12, y: 7}
+        - {x: 12, y: 14}
+        - {x: 32, y: 18}
+        - {x: 32, y: 30}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1d6961bc25090e4992f410ce55ef46d
+      internalID: -1257948298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -32, y: 30}
+        - {x: -32, y: 18}
+        - {x: -13, y: 15}
+        - {x: 12, y: 7}
+        - {x: 32, y: -2}
+        - {x: 32, y: 21}
+        - {x: 7, y: 30}
+      tessellationDetail: 0
+      bones: []
+      spriteID: eea7d060791d9ae4b82735dec059ae0a
+      internalID: 1395309250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -32, y: 10}
+        - {x: -32, y: -4}
+        - {x: -16, y: -16}
+        - {x: -4, y: -32}
+        - {x: 10, y: -32}
+        - {x: 10, y: -24}
+        - {x: -24, y: 10}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8806743653ab48448bd61cf9c9bf8a5
+      internalID: -696244515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -18, y: -32}
+        - {x: -18, y: 32}
+        - {x: -30, y: 32}
+        - {x: -30, y: -32}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3121684b864d9c49851021715ec5557
+      internalID: -1642290484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 30, y: -32}
+        - {x: 30, y: 32}
+        - {x: 18, y: 32}
+        - {x: 18, y: -32}
+      tessellationDetail: 0
+      bones: []
+      spriteID: faa6039089ad1774196b39b48cd654d6
+      internalID: -1947710946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_9
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -17, y: 32}
+        - {x: -30, y: 10}
+        - {x: -30, y: -32}
+        - {x: -18, y: -32}
+        - {x: -13, y: -14}
+        - {x: -6, y: 11}
+        - {x: 2, y: 32}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4a5619d90047364db77e7b6722f5960
+      internalID: 2006604564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_10
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -2, y: 32}
+        - {x: 5, y: 11}
+        - {x: 13, y: -13}
+        - {x: 15, y: -32}
+        - {x: 30, y: -32}
+        - {x: 30, y: 18}
+        - {x: 22, y: 32}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea2f51241e7e6c242b57dd38db4dcbb2
+      internalID: -1933826408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -30, y: 32}
+        - {x: -30, y: 6}
+        - {x: -29, y: -5}
+        - {x: 2, y: -29}
+        - {x: 15, y: -30}
+        - {x: 32, y: -30}
+        - {x: 32, y: -18}
+        - {x: 5, y: -7}
+        - {x: -7, y: 4}
+        - {x: -17, y: 32}
+      tessellationDetail: 0
+      bones: []
+      spriteID: de6c1d76c139dda49a959b15482f2849
+      internalID: -1373535268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_12
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -32, y: -30}
+        - {x: 32, y: -30}
+        - {x: 32, y: -18}
+        - {x: -32, y: -18}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3e6413dc3088e64190eb3dc0f591955
+      internalID: -1534135590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_13
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 30, y: 15}
+        - {x: 30, y: 32}
+        - {x: 17, y: 32}
+        - {x: 7, y: 5}
+        - {x: -4, y: -8}
+        - {x: -32, y: -16}
+        - {x: -32, y: -30}
+        - {x: -10, y: -30}
+        - {x: -2, y: -29}
+        - {x: 19, y: -12}
+        - {x: 29, y: 2}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63e8ecf325890e649a4ce7931f2df22d
+      internalID: -1961170144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_14
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -30, y: 32}
+        - {x: -30, y: -11}
+        - {x: -20, y: -30}
+        - {x: -17, y: -32}
+        - {x: 2, y: -32}
+        - {x: -7, y: -12}
+        - {x: -15, y: 12}
+        - {x: -18, y: 32}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8e2c0305b2d2d744a98b2d0d472a91a
+      internalID: -1307945627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_15
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 15, y: 32}
+        - {x: 14, y: 13}
+        - {x: 5, y: -12}
+        - {x: -2, y: -32}
+        - {x: 21, y: -32}
+        - {x: 30, y: -7}
+        - {x: 30, y: 32}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad37612ee5a07c24bb3877cf357ad350
+      internalID: -1130793496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_16
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 32}
+        - {x: -10, y: 32}
+        - {x: -10, y: 24}
+        - {x: -7, y: 19}
+        - {x: 23, y: -10}
+        - {x: 32, y: -10}
+        - {x: 32, y: 3}
+        - {x: 17, y: 16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40b4f803d8a4b4447ab8027adbeefd72
+      internalID: -1786366233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -32, y: 2}
+        - {x: -32, y: -21}
+        - {x: -6, y: -30}
+        - {x: 32, y: -30}
+        - {x: 32, y: -18}
+        - {x: 13, y: -15}
+        - {x: -12, y: -7}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2678425b4e0322d46a45be7190ea40a3
+      internalID: -1391365207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_18
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 11, y: -7}
+        - {x: -13, y: -15}
+        - {x: -32, y: -18}
+        - {x: -32, y: -30}
+        - {x: 17, y: -30}
+        - {x: 32, y: -19}
+        - {x: 32, y: 2}
+      tessellationDetail: 0
+      bones: []
+      spriteID: acaf089bd8bfdab4ba22ea81bc0ac034
+      internalID: -950944957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_19
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -6, y: 32}
+        - {x: -17, y: 16}
+        - {x: -32, y: 5}
+        - {x: -32, y: -10}
+        - {x: -22, y: -10}
+        - {x: 10, y: 21}
+        - {x: 10, y: 32}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1c6efc8db3f1d14ba60aaaa5b557924
+      internalID: 152549996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -32, y: 20}
+        - {x: -27, y: 20}
+        - {x: -20, y: 20}
+        - {x: -19.999199, y: 32}
+        - {x: -28.037312, y: 32}
+        - {x: -32, y: 27.992188}
+      tessellationDetail: 0
+      bones: []
+      spriteID: dab35534ecc1d3c4aa41322e53c8e630
+      internalID: -272584312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_21
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -27.957329, y: 32}
+        - {x: -32, y: 27.994888}
+        - {x: -32, y: 19.990875}
+        - {x: -20, y: 20}
+        - {x: -20, y: 28}
+        - {x: -20.138237, y: 32}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6c3b39d5c896e84791f286a4d385420
+      internalID: -1838334178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_22
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 20, y: 32}
+        - {x: 20, y: 28}
+        - {x: 20, y: 18}
+        - {x: 32, y: 18}
+        - {x: 32, y: 30}
+        - {x: 30, y: 32}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76bc190e3ab55664c8494ff5e3be745d
+      internalID: -1522066918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_23
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 18, y: 32}
+        - {x: 18, y: 20}
+        - {x: 28, y: 20}
+        - {x: 32, y: 20}
+        - {x: 32, y: 31}
+        - {x: 31, y: 32}
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeb62a91f93e4f644a4e001f5779ed88
+      internalID: -1677475736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_24
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 18, y: -24}
+        - {x: 18, y: -32}
+        - {x: 30, y: -32}
+        - {x: 32, y: -30}
+        - {x: 32, y: -18}
+        - {x: 24, y: -18}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e7101ca950e2f444b9c31e7ee13601f
+      internalID: -889227533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_25
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -32, y: -18}
+        - {x: -32, y: -30}
+        - {x: -30, y: -32}
+        - {x: -18, y: -32}
+        - {x: -18, y: -22}
+        - {x: -22, y: -18}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 160c52757256e2b4eb62c301bbc573f7
+      internalID: -1633976329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_26
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 18, y: 32}
+        - {x: 18, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 12}
+        - {x: 30, y: 32}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8451acf5d4a9bf9478512b161dc5e822
+      internalID: -435487297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_27
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -32, y: -18}
+        - {x: -32, y: -32}
+        - {x: 31, y: -32}
+        - {x: 32, y: -31}
+        - {x: 32, y: -18}
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd9179c091af16040a0ba4105c755606
+      internalID: 1532256447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -32, y: -30}
+        - {x: -30, y: -32}
+        - {x: -18, y: -32}
+        - {x: -18, y: -20}
+        - {x: -27, y: -20}
+        - {x: -32, y: -20}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e612c195b44f16749b454e6d77a95b2d
+      internalID: 954806135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_29
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -32, y: -18}
+        - {x: -32, y: -28}
+        - {x: -28, y: -32}
+        - {x: -20, y: -32}
+        - {x: -20, y: -18}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d514a7e50910fab4e8ddbaab61a8f28e
+      internalID: 1445370185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_30
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 20, y: -28}
+        - {x: 20, y: -32}
+        - {x: 31, y: -32}
+        - {x: 32, y: -31}
+        - {x: 32, y: -18}
+        - {x: 20, y: -18}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60b72e67ce5c1ac4d8c74df87ba33ece
+      internalID: -1319327364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_31
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 18, y: -20}
+        - {x: 18, y: -32}
+        - {x: 28, y: -32}
+        - {x: 32, y: -28}
+        - {x: 32, y: -20}
+        - {x: 28, y: -20}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d3cfb3fdc42aff4d870c7e0e9cc0a7a
+      internalID: 1704238067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_32
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 18, y: 32}
+        - {x: 18, y: 24}
+        - {x: 24, y: 18}
+        - {x: 32, y: 18}
+        - {x: 32, y: 30}
+        - {x: 30, y: 32}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61100d8d1056a3942b0022ae6458b2c3
+      internalID: 1045972715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_33
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -30, y: 32}
+        - {x: -32, y: 30}
+        - {x: -32, y: 18}
+        - {x: -22, y: 18}
+        - {x: -18, y: 22}
+        - {x: -18, y: 32}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 801040b05a0917d4dbc86de29b2de57b
+      internalID: 816249597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_34
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 6, y: 32}
+        - {x: -32, y: 30}
+        - {x: -32, y: 18}
+        - {x: 32, y: 18}
+        - {x: 32, y: 30}
+        - {x: 30, y: 32}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 936872af0fda915428b456e4f7736ccc
+      internalID: -790869112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_35
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -32, y: 6}
+        - {x: -30, y: -32}
+        - {x: -18, y: -32}
+        - {x: -18, y: 32}
+        - {x: -30, y: 32}
+        - {x: -32, y: 30}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02cbf165b300eb04aa4b1fb4cce55653
+      internalID: 1308412477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 26, y: 30}
+        - {x: -30, y: -26}
+        - {x: -30, y: -32}
+        - {x: -10, y: -32}
+        - {x: 19, y: -20}
+        - {x: 32, y: 11}
+        - {x: 32, y: 30}
+      tessellationDetail: 0
+      bones: []
+      spriteID: babf61b51860de047854fa19abdcbfb2
+      internalID: 2039924263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_37
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -32, y: 30}
+        - {x: -32, y: 14}
+        - {x: 14, y: -32}
+        - {x: 30, y: -32}
+        - {x: 30, y: -28}
+        - {x: -25, y: 30}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a42e04f88c925554f9d6b4ae1ad7b006
+      internalID: -1042483112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -30, y: 32}
+        - {x: -30, y: 27}
+        - {x: -15, y: 10}
+        - {x: 27, y: -30}
+        - {x: 32, y: -30}
+        - {x: 32, y: -8}
+        - {x: 28, y: 6}
+        - {x: -12, y: 32}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61b81637443eab54d9f18ce3668191cc
+      internalID: -1538678491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lord_39
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 13, y: 32}
+        - {x: -32, y: -7}
+        - {x: -32, y: -30}
+        - {x: -25, y: -30}
+        - {x: 30, y: 26}
+        - {x: 30, y: 32}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e543bd0b45bbc46ad789708314be14
+      internalID: 1603516265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      lord_6: -696244515
+      lord_2: 1705218426
+      lord_31: 1704238067
+      lord_8: -1947710946
+      lord_13: -1961170144
+      lord_10: -1933826408
+      lord_3: -54141720
+      lord_15: -1130793496
+      lord_28: 954806135
+      lord_5: 1395309250
+      lord_32: 1045972715
+      lord_18: -950944957
+      lord_4: -1257948298
+      lord_22: -1522066918
+      lord_14: -1307945627
+      lord_27: 1532256447
+      lord_34: -790869112
+      lord_39: 1603516265
+      lord_24: -889227533
+      lord_11: -1373535268
+      lord_26: -435487297
+      lord_36: 2039924263
+      lord_38: -1538678491
+      lord_12: -1534135590
+      lord_29: 1445370185
+      lord_35: 1308412477
+      lord_25: -1633976329
+      lord_30: -1319327364
+      lord_16: -1786366233
+      lord_33: 816249597
+      lord_1: -749368751
+      lord_7: -1642290484
+      lord_21: -1838334178
+      lord_37: -1042483112
+      lord_23: -1677475736
+      lord_9: 2006604564
+      lord_0: 2025383468
+      lord_20: -272584312
+      lord_17: -1391365207
+      lord_19: 152549996
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
