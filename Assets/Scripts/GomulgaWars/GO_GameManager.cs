@@ -14,14 +14,17 @@ public class GO_GameManager : MonoBehaviour
     public Text[] Stagetext;
     public AudioClip GameOverSound;
     public static int Stage = 0;
+    public static bool BGMStop;
     AudioSource GameAudio;
     private bool Isclear = true;
 
     private void Start()
     {
+        Time.timeScale = 1;
         GameAudio = GetComponent<AudioSource>();
         Stagetext[0].text = Stage.ToString() + " stage";
         Stagetext[1].text = Stage.ToString() + " stage";
+        Stagetext[2].text = Stage.ToString() + " stage";
     }
 
     // Update is called once per frame
@@ -29,6 +32,7 @@ public class GO_GameManager : MonoBehaviour
         if(Input.GetKeyUp(KeyCode.Escape)) { 
             StopPanel.SetActive(true);
             StopImage.SetActive(true);
+            BGMStop = true;
             Time.timeScale = 0;
         }
         if (Isclear == true){

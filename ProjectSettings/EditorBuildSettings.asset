@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/GomulgaWars.unity
+    guid: 7323774ed9ea176449d31b5da80a0a26
   m_configObjects: {}

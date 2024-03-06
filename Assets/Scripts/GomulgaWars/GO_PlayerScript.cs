@@ -39,6 +39,7 @@ public class GO_PlayerScript : MonoBehaviour
         if (collision.tag == "Enemy"){
             Collider = collision;
             IsMove = false;
+            GetComponent<GO_AttackScript>().Attack();
             Invoke("EnemyFight", 2);
         }
         if (collision.tag == "Enemy2")
