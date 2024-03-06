@@ -64,6 +64,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: backgrund
+    uniqueID: 1941464425
+    locked: 0
+  - name: Trail
+    uniqueID: 4074027699
+    locked: 0
+  - name: car
+    uniqueID: 2832412821
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
