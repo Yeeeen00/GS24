@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GomulgaWars.unity
     guid: 7323774ed9ea176449d31b5da80a0a26
+  - enabled: 1
+    path: Assets/Scenes/AimMasterScenes/Ai_gamestart.unity
+    guid: fc874fb38d548274f9c2700b8ceca598
+  - enabled: 1
+    path: Assets/Scenes/AimMasterScenes/AI_maingame.unity
+    guid: cdc5a362a0007b24e87378a93eb26779
+  - enabled: 1
+    path: Assets/Scenes/AimMasterScenes/Ai_gameover.unity
+    guid: efbcdb15675a7954fb3c260de1c322d0
   m_configObjects: {}

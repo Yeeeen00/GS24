@@ -79,6 +79,6 @@ public class MovinTarget : MonoBehaviour
 
     public void EndGame()
     {
-        SceneManager.LoadScene("gameover");
+        SceneManager.LoadScene("Ai_gameover");
     }
 }

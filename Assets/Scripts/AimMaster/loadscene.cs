@@ -7,6 +7,6 @@ public class loadscene : MonoBehaviour
 {
     public void LoadScene()
     {
-        SceneManager.LoadScene("maingame");
+        SceneManager.LoadScene("AI_maingame");
     }
 }

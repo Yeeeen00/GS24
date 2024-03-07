@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
 
     void EndGame()
     {
-        SceneManager.LoadScene("gameover");
+        SceneManager.LoadScene("Ai_gameover");
     }
 
 }

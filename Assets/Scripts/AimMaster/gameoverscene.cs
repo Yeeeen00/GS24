@@ -29,14 +29,14 @@ public class gameoverscene : MonoBehaviour
 
     public void GotoMain()
     {
-        SceneManager.LoadScene("gamestart");
+        SceneManager.LoadScene("Ai_gamestart");
         MovinTarget.score = 0;
         MovinTarget.accuracyRate = 0.0f;
     }
 
     public void ReStart()
     {
-        SceneManager.LoadScene("maingame");
+        SceneManager.LoadScene("AI_maingame");
         MovinTarget.score = 0;
         MovinTarget.accuracyRate = 0.0f;
 ;    }
