@@ -46,7 +46,6 @@ public class GO_PlayerScript : MonoBehaviour
         {
             Collider2 = collision;
             Enemy2Exist = true;
-            IsMove = false;
         }
     }
     public void EnemyFight(){
@@ -57,6 +56,7 @@ public class GO_PlayerScript : MonoBehaviour
             }
             else {
                 P_num += Collider.GetComponent<GO_EnemyScript>().M_num;
+                GetComponent<GO_AttackScript>().OffAttack();
                 IsMove = true;
             }
             Destroy(Collider.gameObject);
@@ -73,6 +73,7 @@ public class GO_PlayerScript : MonoBehaviour
         if (Collider2.GetComponent<GO_Enemy2Script>().M_num < P_num){
             P_num += Collider2.GetComponent<GO_Enemy2Script>().M_num + Numsum;
             Destroy(Collider2.gameObject);
+            GetComponent<GO_AttackScript>().OffAttack();
             Enemy2Exist = false;
             Numsum = 0;
             IsMove = true;

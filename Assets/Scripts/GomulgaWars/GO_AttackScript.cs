@@ -11,17 +11,16 @@ public class GO_AttackScript : MonoBehaviour
         animator=GetComponent<Animator>();
         animator.enabled = false;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-    }
     public void Attack()
     {
         animator.enabled = true;
-        if (GO_PlayerSkin.Level==1)
+        if (GO_PlayerSkin.Level == GO_PlayerSkin.IsLevel)
         {
-            animator.SetTrigger("01");
+            animator.SetTrigger(GO_PlayerSkin.Ani);
         }
+    }
+    public void OffAttack()
+    {
+        animator.enabled = false;
     }
 }
