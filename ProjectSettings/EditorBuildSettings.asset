@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: 8abddc94f75bf0f47853af28243c1c4d
+  - enabled: 1
+    path: Assets/Scenes/GameSelectScene.unity
+    guid: 8c4ecfa4572b10d45a92966298846533
+  - enabled: 1
     path: Assets/Scenes/GomulgaWars.unity
     guid: 7323774ed9ea176449d31b5da80a0a26
   - enabled: 1
