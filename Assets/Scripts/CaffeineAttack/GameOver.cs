@@ -19,7 +19,7 @@ namespace Match3
 
             for (int i = 0; i < stars.Length; i++)
             {
-                stars[i].enabled = false;
+                
             }
         }
 
@@ -83,7 +83,7 @@ namespace Match3
 
         public void OnDoneClicked()
         {
-            SceneManager.LoadScene("LevelSelect");
+            SceneManager.LoadScene("MainScene");
         }
 
     }
