@@ -231,4 +231,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clearAnimation: {fileID: 7400000, guid: 961f51c3ea5815646a6329503dffd82b, type: 2}
-  isRow: 1
+  isRow: 0

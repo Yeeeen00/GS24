@@ -5,5 +5,11 @@ using UnityEngine;
 public class checkpiints : MonoBehaviour
 {
     public bool isFinishLine = false;
-    public int checkPointNumber = 1;
+    public bool isStarted = false;
+
+
+    public void RaceStart()
+    {
+        isStarted = true;
+    }
 }
