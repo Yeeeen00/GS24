@@ -5,21 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class GO_ButtonManager : MonoBehaviour
 {
-    public AudioClip BtnclickSound;
-    AudioSource BtnclickSoundSource;
     public GameObject StopPanel;
     public GameObject StopImage;
-    private void Start()
-    {
-        BtnclickSoundSource = GetComponent<AudioSource>();
-    }
     public void OnReStartBtnOnoClick()
     {
-        BtnclickSoundSource.PlayOneShot(BtnclickSound);
-        Invoke("Restoncl", 0.25f);
+        BtnClickSound.IsBtnClick = true;
+        SceneManager.LoadScene("GomulgaWars");
+        GO_GameManager.BGMStop = false;
+        GO_PlayerScript.P_num /= 10;
     }
     public void ReTryOnclick()
     {
+        BtnClickSound.IsBtnClick = true;
         SceneManager.LoadScene("GomulgaWars");
         GO_GameManager.BGMStop = false;
         GO_GameManager.Stage -= 1;
@@ -28,31 +25,26 @@ public class GO_ButtonManager : MonoBehaviour
     }
     public void OnRestart()
     {
-        BtnclickSoundSource.PlayOneShot(BtnclickSound);
-        Invoke("Rest", 0.25f);
-    }
-    public void OnContinueOnClick()
-    {
-        BtnclickSoundSource.PlayOneShot(BtnclickSound);
-        Time.timeScale = 1;
-        GO_GameManager.BGMStop = false;
-        StopPanel.SetActive(false);
-        StopImage.SetActive(false);
-    }
-    public void ExitMainScene()
-    {
-        
-    }
-    void Rest()
-    {
+        BtnClickSound.IsBtnClick = true;
         SceneManager.LoadScene("GomulgaWars");
         GO_GameManager.BGMStop = false;
         GO_PlayerScript.P_num = GO_PlayerScript.SaveNum;
     }
-    void Restoncl()
+    public void OnContinueOnClick()
     {
-        SceneManager.LoadScene("GomulgaWars");
+        BtnClickSound.IsBtnClick = true;
+        Time.timeScale = 1;
         GO_GameManager.BGMStop = false;
-        GO_PlayerScript.P_num /= 10;
+        StopPanel.SetActive(false);
+        StopImage.SetActive(false);
+        GO_GameManager.Escbtncheck = 0;
+    }
+    public void ExitMainScene()
+    {
+        BtnClickSound.IsBtnClick = true;
+        GO_PlayerScript.P_num = 0;
+        GO_GameManager.Stage = 0;
+        GO_PlayerScript.SaveNum = 0;
+        SceneManager.LoadScene("GameSelectScene");
     }
 }

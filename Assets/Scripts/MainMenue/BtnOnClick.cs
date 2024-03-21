@@ -1,3 +1,4 @@
+using Newtonsoft.Json.Bson;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,5 +25,10 @@ public class BtnOnClick : MonoBehaviour
     {
         BtnClickSound.IsBtnClick = true;
         SceneManager.LoadScene("MainScene");
+    }
+    public void SettingBtnOnClick()
+    {
+        BtnClickSound.IsBtnClick = true;
+        GameObject.Find("SettingPanel").gameObject.SetActive(true);
     }
 }

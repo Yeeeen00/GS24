@@ -39,7 +39,7 @@ public class GO_Enemy2Script : MonoBehaviour
         }
         if (Enemy == true)
             if (col == false)
-                transform.localPosition = Vector3.MoveTowards(transform.localPosition, Enemy2Move, 0.7f);
+                transform.localPosition = Vector3.MoveTowards(transform.localPosition, Enemy2Move, 0.85f);
         if (GO_DragHandler.Boxbool == true) box.enabled = true;
         if (GO_DragHandler.Boxbool == false) box.enabled = false;
     }
