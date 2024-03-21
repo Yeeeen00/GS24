@@ -529,7 +529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d760ebf21ad93540b408a0e5c0d157d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  XmoveRange: 10
+  XmoveRange: 8
   YmoveRange: 3
   scorePerHit: 10
 --- !u!65 &1129992187
