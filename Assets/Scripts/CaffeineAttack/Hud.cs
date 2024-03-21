@@ -64,16 +64,16 @@ namespace Match3
             switch (type)
             {
                 case LevelType.Moves:
-                    remainingSubText.text = "moves remaining";
-                    targetSubtext.text = "target score";
+                    remainingSubText.text = "남은 횟수";
+                    targetSubtext.text = "목표 점수";
                     break;
                 case LevelType.Obstacle:
-                    remainingSubText.text = "moves remaining";
+                    remainingSubText.text = "남은 횟수";
                     targetSubtext.text = "bubbles remaining";
                     break;
                 case LevelType.Timer:
                     remainingSubText.text = "time remaining";
-                    targetSubtext.text = "target score";
+                    targetSubtext.text = "목표 점수";
                     break;
             }
         }
