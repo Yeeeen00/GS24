@@ -17,7 +17,7 @@ public class GO_GameManager : MonoBehaviour
     public static bool BGMStop;
     AudioSource GameAudio;
     private bool Isclear = true;
-
+    public static int Escbtncheck = 0;
     private void Start()
     {
         Time.timeScale = 1;
@@ -29,11 +29,22 @@ public class GO_GameManager : MonoBehaviour
 
     // Update is called once per frame
     void Update(){
-        if(Input.GetKeyUp(KeyCode.Escape)) { 
-            StopPanel.SetActive(true);
-            StopImage.SetActive(true);
-            BGMStop = true;
-            Time.timeScale = 0;
+        if(Input.GetKeyUp(KeyCode.Escape)) {
+            if (Escbtncheck==0){
+                StopPanel.SetActive(true);
+                StopImage.SetActive(true);
+                BGMStop = true;
+                Time.timeScale = 0;
+                Escbtncheck++;
+            }
+            else if (Escbtncheck==1) {
+                BtnClickSound.IsBtnClick = true;
+                Time.timeScale = 1;
+                BGMStop = false;
+                StopPanel.SetActive(false);
+                StopImage.SetActive(false);
+                Escbtncheck = 0;
+            }
         }
         if (Isclear == true){
             if (GameObject.FindGameObjectWithTag("Enemy") == null && GameObject.FindGameObjectWithTag("Enemy2") == null){
