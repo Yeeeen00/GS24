@@ -84,7 +84,7 @@ public class GameSelectScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameBtn[arrnum].transform.transform.localScale = new Vector3(1.5f, 1.5f);
+        GameBtn[arrnum].transform.transform.localScale = new Vector3(1.7f, 1.7f);
         if (GameObject.Find("GameIconBtn").transform.position.x > -2500) { Isrigthmove = true; }
         if (GameObject.Find("GameIconBtn").transform.position.x <= -2500) { Isrigthmove = false; }
         if (GameObject.Find("GameIconBtn").transform.position.x < 500) { Isleftmove = true; }
