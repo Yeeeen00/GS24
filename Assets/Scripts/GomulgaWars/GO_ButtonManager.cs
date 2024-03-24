@@ -46,5 +46,6 @@ public class GO_ButtonManager : MonoBehaviour
         GO_GameManager.Stage = 0;
         GO_PlayerScript.SaveNum = 0;
         SceneManager.LoadScene("GameSelectScene");
+        Time.timeScale = 1;
     }
 }
