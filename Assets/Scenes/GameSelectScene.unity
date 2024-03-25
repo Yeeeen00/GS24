@@ -2303,8 +2303,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1451281809}
+  - component: {fileID: 1451281810}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: AudioManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2325,6 +2326,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1451281810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451281808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0077cdfc8bb30cc449dd530e433795a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1483981719
 GameObject:
   m_ObjectHideFlags: 0
@@ -2647,6 +2660,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1585112606}
   - component: {fileID: 1585112607}
+  - component: {fileID: 1585112608}
   m_Layer: 0
   m_Name: BgmSlider
   m_TagString: Untagged
@@ -2724,10 +2738,34 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.5
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1451281810}
+        m_TargetAssemblyTypeName: VolumeSet, Assembly-CSharp
+        m_MethodName: SetLevel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1585112608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585112605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e56343d94c78b046b3de50df5e1dff1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1621795824
 GameObject:
   m_ObjectHideFlags: 0
@@ -3670,6 +3708,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1986295905}
   - component: {fileID: 1986295906}
+  - component: {fileID: 1986295907}
   m_Layer: 0
   m_Name: ButtonSlider
   m_TagString: Untagged
@@ -3747,10 +3786,34 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.5
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1451281810}
+        m_TargetAssemblyTypeName: VolumeSet, Assembly-CSharp
+        m_MethodName: SetSound
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1986295907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986295904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e56343d94c78b046b3de50df5e1dff1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2022553769
 GameObject:
   m_ObjectHideFlags: 0
