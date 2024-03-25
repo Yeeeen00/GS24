@@ -78,6 +78,10 @@ public class GameSelectScript : MonoBehaviour
                 {
                     SceneManager.LoadScene("BIBIMBAB");
                 }
+                if(clickBtnObject.name =="CA")
+                {
+                    SceneManager.LoadScene("Level01");
+                }
             }
         }
     }
