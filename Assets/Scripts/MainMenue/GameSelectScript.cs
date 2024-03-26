@@ -7,10 +7,31 @@ using UnityEngine.SceneManagement;
 public class GameSelectScript : MonoBehaviour
 {
     GameObject clickBtnObject;
+    static Vector3 vector;
     public List<GameObject> GameBtn = new List<GameObject>();
-    int arrnum = 0;
+    static int arrnum = 0;
     bool Isrigthmove;
     bool Isleftmove;
+    static int Gamecount = 0;
+    private void Start()
+    {
+        if (Gamecount >= 1){
+            GameObject.Find("GameIconBtn").transform.position=vector;
+        }
+        Gamecount++;
+    }
+    public void StartBtnclick()
+    {
+        BtnClickSound.IsBtnClick = true;
+        if(arrnum==0) SceneManager.LoadScene("Ai_gamestart");
+        //if(arrnum==1)
+        if(arrnum==2) SceneManager.LoadScene("Level01");
+        if(arrnum==3) SceneManager.LoadScene("GomulgaWars");
+        if(arrnum==4) SceneManager.LoadScene("Racing");
+        if(arrnum==5) SceneManager.LoadScene("BIBIMBAB");
+        //if(arrnum==6)
+        if(arrnum==7) SceneManager.LoadScene("BlockCode");
+    }
     // Start is called before the first frame update
     void Right()
     {
@@ -89,6 +110,7 @@ public class GameSelectScript : MonoBehaviour
     void Update()
     {
         GameBtn[arrnum].transform.transform.localScale = new Vector3(1.7f, 1.7f);
+        vector = GameObject.Find("GameIconBtn").transform.position;
         if (GameObject.Find("GameIconBtn").transform.position.x > -2500) { Isrigthmove = true; }
         if (GameObject.Find("GameIconBtn").transform.position.x <= -2500) { Isrigthmove = false; }
         if (GameObject.Find("GameIconBtn").transform.position.x < 500) { Isleftmove = true; }
