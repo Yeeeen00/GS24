@@ -1,22 +1,26 @@
+using Match3;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameSelectScript : MonoBehaviour
 {
     GameObject clickBtnObject;
+    public Text gamename;
+    public Text Scoretext;
     static Vector3 vector;
     public List<GameObject> GameBtn = new List<GameObject>();
-    static int arrnum = 0;
+    public static int arrnum = 0;
     bool Isrigthmove;
     bool Isleftmove;
     static int Gamecount = 0;
     private void Start()
     {
         if (Gamecount >= 1){
-            GameObject.Find("GameIconBtn").transform.position=vector;
+            GameObject.Find("GameIconBtn").transform.position = vector;
         }
         Gamecount++;
     }
@@ -31,6 +35,45 @@ public class GameSelectScript : MonoBehaviour
         if(arrnum==5) SceneManager.LoadScene("BIBIMBAB");
         //if(arrnum==6)
         if(arrnum==7) SceneManager.LoadScene("BlockCode");
+    }
+    public void ReCordButton()
+    {
+        BtnClickSound.IsBtnClick = true;
+        if (arrnum == 0)
+        {
+            gamename.text = "에임 마스터즈";
+            if (MovinTarget.AIM_SaveScore == 0)
+                Scoretext.text = "아직 기록이 없습니다.";
+            else if (MovinTarget.AIM_SaveScore != 0)
+                Scoretext.text =  MovinTarget.AIM_SaveScore.ToString();
+        }
+        //if(arrnum==1)
+        if (arrnum == 2)
+        {
+            gamename.text = "카페인 어택";
+            if (Hud.CA_SaveGameScore == 0)
+                Scoretext.text = "아직 기록이 없습니다.";
+            else if(Hud.CA_SaveGameScore != 0)
+                Scoretext.text = Hud.CA_SaveGameScore.ToString();
+        }
+        if (arrnum == 3)
+        {
+
+        }
+        if (arrnum == 4)
+        {
+
+        }
+        if (arrnum == 5)
+        {
+
+        }
+        //if(arrnum==6)
+        if (arrnum == 7)
+        {
+
+        }
+        
     }
     // Start is called before the first frame update
     void Right()

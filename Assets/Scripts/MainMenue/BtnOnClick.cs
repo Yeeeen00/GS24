@@ -10,22 +10,15 @@ public class BtnOnClick : MonoBehaviour
     public GameObject settingpanel;
     float speed = 1000;
     bool IsSettingMove;
-    GameObject setting;
-    private void Start()
-    {
-        setting = GameObject.Find("Setting");
-    }
+    int Pos;
+    string Panelname;
     private void Update()
     {
-        if (IsSettingMove==true)
-        {
-            setting.transform.localPosition = 
-                Vector3.MoveTowards(setting.transform.localPosition, new Vector3(0,0,0),Time.deltaTime * speed);
+        if (IsSettingMove==true){
+            GameObject.Find(Panelname).transform.localPosition = Vector3.MoveTowards(GameObject.Find(Panelname).transform.localPosition, new Vector3(0,0,0),Time.deltaTime * speed);
         }
-        if (IsSettingMove==false)
-        {
-            setting.transform.localPosition =
-                Vector3.MoveTowards(setting.transform.localPosition, new Vector3(0, 980, 0) , Time.deltaTime * speed);
+        if (IsSettingMove==false){
+            GameObject.Find(Panelname).transform.localPosition = Vector3.MoveTowards(GameObject.Find(Panelname).transform.localPosition, new Vector3(0, Pos, 0) , Time.deltaTime * speed);
         }
         
     }
@@ -50,6 +43,8 @@ public class BtnOnClick : MonoBehaviour
     }
     public void SettingBtnOnClick()
     {
+        Pos = 980;
+        Panelname = "Setting";
         BtnClickSound.IsBtnClick = true;
         settingpanel.SetActive(true);
         IsSettingMove = true;
@@ -59,5 +54,14 @@ public class BtnOnClick : MonoBehaviour
         BtnClickSound.IsBtnClick = true;
         settingpanel.SetActive(false);
         IsSettingMove = false;
+    }
+    public void ReCordBtnOnClick()
+    {
+        Pos = 1100;
+        Panelname = "ReCordUI";
+        BtnClickSound.IsBtnClick = true;
+        settingpanel.SetActive(true);
+        IsSettingMove = true;
+        GameObject.Find("ButtonManager").GetComponent<GameSelectScript>().ReCordButton();
     }
 }

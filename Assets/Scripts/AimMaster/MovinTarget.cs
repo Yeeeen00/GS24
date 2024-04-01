@@ -13,7 +13,7 @@ public class MovinTarget : MonoBehaviour
     public int scorePerHit = 10;
     public static float accuracyRate = 0f;
     public static int score = 0;
-
+    public static int AIM_SaveScore = 0;
     private int clickCount = 0;
     private bool isGameActive = true; // 게임 활성화 여부
 
@@ -66,6 +66,9 @@ public class MovinTarget : MonoBehaviour
         {
             scoreText.text = "점수: " + score.ToString();
             accuracyRateText.text = "명중률: " + accuracyRate.ToString("F1") + "%";
+            if(score>AIM_SaveScore){
+                AIM_SaveScore = score;
+            }
         }
     }
 

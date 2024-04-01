@@ -8,7 +8,8 @@ namespace Match3
     {
         public Level level;
         public GameOver gameOver;
-
+        int GameScore;
+        static public int CA_SaveGameScore = 0;
         public Text remainingText;
         public Text remainingSubText;
         public Text targetText;
@@ -29,7 +30,9 @@ namespace Match3
         public void SetScore(int score)
         {
             scoreText.text = score.ToString();
-
+            GameScore = score;
+            if(GameScore > CA_SaveGameScore)
+                CA_SaveGameScore = GameScore;
             int visibleStar = 0;
 
             if (score >= level.score1Star && score < level.score2Star)
