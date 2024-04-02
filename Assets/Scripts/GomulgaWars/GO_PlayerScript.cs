@@ -10,6 +10,7 @@ public class GO_PlayerScript : MonoBehaviour
     bool IsMove;
     public static int P_num = 0;
     public static int SaveNum;
+    public static int GO_SaveP_num = 0;
     public Text P_text;
     int Numsum=0;
     Collider2D Collider;
@@ -26,6 +27,9 @@ public class GO_PlayerScript : MonoBehaviour
         SaveNum = P_num;
     }
     private void Update(){
+        if (P_num > GO_SaveP_num){
+            GO_SaveP_num=P_num;
+        }
         P_text.text = P_num.ToString();
         if (IsMove == true){
             IsDrag = true;

@@ -83,7 +83,7 @@ namespace Match3
 
         public void OnDoneClicked()
         {
-            SceneManager.LoadScene("MainScene");
+            SceneManager.LoadScene("GameSelectScene");
         }
 
     }

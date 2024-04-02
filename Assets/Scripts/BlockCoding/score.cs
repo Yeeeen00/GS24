@@ -7,6 +7,7 @@ using TMPro;
 public class score : MonoBehaviour
 {
     public float Score;
+    public static float B_SaveScore=0;
     public TMP_Text text;
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,9 @@ public class score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Score>B_SaveScore){
+            B_SaveScore = Score;
+        }
     }
     public float scoreSum(float s)
     {

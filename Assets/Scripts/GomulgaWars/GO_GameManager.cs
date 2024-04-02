@@ -13,6 +13,7 @@ public class GO_GameManager : MonoBehaviour
     public GameObject StopPanel;
     public Text[] Stagetext;
     public AudioClip GameOverSound;
+    public static int GO_SaveStage = 0;
     public static int Stage = 0;
     public static bool BGMStop;
     AudioSource GameAudio;
@@ -29,6 +30,8 @@ public class GO_GameManager : MonoBehaviour
 
     // Update is called once per frame
     void Update(){
+        if(Stage>GO_SaveStage)
+            GO_SaveStage = Stage;
         if(Input.GetKeyUp(KeyCode.Escape)) {
             if (Escbtncheck==0){
                 StopPanel.SetActive(true);
