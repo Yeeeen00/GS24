@@ -12,6 +12,9 @@ public class GameSelectScript : MonoBehaviour
     public Text gamename;
     public Text Scoretext;
     public Text Scoretext2;
+    public Text name1;
+    public Text name2;
+    public Text name3;
     static Vector3 vector;
     public List<GameObject> GameBtn = new List<GameObject>();
     public static int arrnum = 0;
@@ -33,6 +36,58 @@ public class GameSelectScript : MonoBehaviour
         if(arrnum==5) SceneManager.LoadScene("BIBIMBAB");
         //if(arrnum==6)
         if(arrnum==7) SceneManager.LoadScene("BlockCode");
+    }
+    public void DeveloperButton()
+    {
+        BtnClickSound.IsBtnClick = true;
+        if(arrnum == 0)
+        {
+            name1.text = "박태환";
+            name2.text = "박태환";
+            name3.text = "박태환";
+        }
+        if (arrnum == 1)
+        {
+            name1.text = "민혜은";
+            name2.text = "민혜은,이효린";
+            name3.text = "민혜은";
+        }
+        if (arrnum == 2)
+        {
+            name1.text = "구원";
+            name2.text = "허지하";
+            name3.text = "정민재";
+        }
+        if (arrnum == 3)
+        {
+            name1.text = "민지명";
+            name2.text = "이도현";
+            name3.text = "이도현";
+        }
+        if (arrnum == 4)
+        {
+            name1.text = "박성현";
+            name2.text = "박성현";
+            name3.text = "박성현";
+        }
+        if (arrnum == 5)
+        {
+            name1.text = "홍기웅";
+            name2.text = "우세람";
+            name3.text = "홍기웅";
+        }
+        if (arrnum == 6)
+        {
+            name1.text = "예은우";
+            name2.text = "이효린";
+            name3.text = "윤다희";
+        }
+        if (arrnum == 7)
+        {
+            name1.text = "허지하";
+            name2.text = "허지하";
+            name3.text = "허지하";
+        }
     }
     public void ReCordButton()
     {
@@ -70,7 +125,7 @@ public class GameSelectScript : MonoBehaviour
             }
         }
         if (arrnum == 4){
-            gamename.text = "우";
+            gamename.text = "윙";
         }
         if (arrnum == 5){
             gamename.text = "비벼비벼비빔밥";
@@ -85,7 +140,6 @@ public class GameSelectScript : MonoBehaviour
         }
         
     }
-    // Start is called before the first frame update
     void Right(){
         if (Isrigthmove != false){
             GameObject.Find("GameIconBtn").transform.position += new Vector3(-500, 0, 0);
@@ -136,7 +190,6 @@ public class GameSelectScript : MonoBehaviour
             }
         }
     }
-    // Update is called once per frame
     void Update()
     {
         GameBtn[arrnum].transform.transform.localScale = new Vector3(1.7f, 1.7f);

@@ -64,4 +64,13 @@ public class BtnOnClick : MonoBehaviour
         IsSettingMove = true;
         GameObject.Find("ButtonManager").GetComponent<GameSelectScript>().ReCordButton();
     }
+    public void DeveloperBtnOnclick()
+    {
+        Pos = 1100;
+        Panelname = "DeveloperUI";
+        BtnClickSound.IsBtnClick = true;
+        settingpanel.SetActive(true);
+        IsSettingMove = true;
+        GameObject.Find("ButtonManager").GetComponent<GameSelectScript>().DeveloperButton();
+    }
 }
