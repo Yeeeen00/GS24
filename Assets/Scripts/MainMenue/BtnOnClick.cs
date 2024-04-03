@@ -52,7 +52,7 @@ public class BtnOnClick : MonoBehaviour
     public void ClosedBtnOnClick()
     {
         BtnClickSound.IsBtnClick = true;
-        settingpanel.SetActive(false);
+        Invoke("deley", 1.5f);
         IsSettingMove = false;
     }
     public void ReCordBtnOnClick()
@@ -72,5 +72,9 @@ public class BtnOnClick : MonoBehaviour
         settingpanel.SetActive(true);
         IsSettingMove = true;
         GameObject.Find("ButtonManager").GetComponent<GameSelectScript>().DeveloperButton();
+    }
+    void deley()
+    {
+        settingpanel.SetActive(false);
     }
 }
