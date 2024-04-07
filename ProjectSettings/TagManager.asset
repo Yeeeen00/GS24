@@ -30,6 +30,7 @@ TagManager:
   - Input1
   - Input2
   - input3
+  - GameOver
   layers:
   - Default
   - TransparentFX
