@@ -17,7 +17,8 @@ public class BI_ButtonManager : MonoBehaviour
     bool SauceMake = true;
     bool isRiceMaking = true;
     int Count = 0;
-    public int Point = 0;
+    int Point = 0;
+    public static int BI_SavePoint = 0;
     bool BtnClickcheck = false;
     bool check = true;
     public GameObject NextBtn;
@@ -103,13 +104,11 @@ public class BI_ButtonManager : MonoBehaviour
         if (Count >= 3)
         {
             if (Point < 5)
-            {
                 SceneManager.LoadScene("BibimbabFail");
-            }
-        }
-        if (Point > 5)
-        {
-            SceneManager.LoadScene("BibimbabEnding");
+            else if (Point > 5)
+                SceneManager.LoadScene("BibimbabEnding");
+            if (Point > BI_SavePoint)
+                BI_SavePoint = Point;
         }
     }
     private void Start()

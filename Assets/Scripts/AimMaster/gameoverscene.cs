@@ -11,6 +11,8 @@ public class gameoverscene : MonoBehaviour
 
     public TextMeshProUGUI highScoreText;
     public TextMeshProUGUI newRecordText;
+    public static int AIM_SaveScore = 0;
+    public static float AIM_accuracyRateScore = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +24,10 @@ public class gameoverscene : MonoBehaviour
 
         int score = MovinTarget.score;
         float accurayrate = MovinTarget.accuracyRate;
-
+        if (score > AIM_SaveScore)
+            AIM_SaveScore = score;
+        if (MovinTarget.accuracyRate > AIM_accuracyRateScore)
+            AIM_accuracyRateScore = accurayrate;
         scoretext.text = "점수: " + score.ToString();
         accurayratetext.text = "명중률: " + accurayrate.ToString("F1") + "%";
     }

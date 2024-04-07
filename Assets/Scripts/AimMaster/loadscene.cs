@@ -9,4 +9,8 @@ public class loadscene : MonoBehaviour
     {
         SceneManager.LoadScene("AI_maingame");
     }
+    public void ExitMenu()
+    {
+        SceneManager.LoadScene("GameSelectScene");
+    }
 }

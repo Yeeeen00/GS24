@@ -96,13 +96,13 @@ public class GameSelectScript : MonoBehaviour
         Scoretext2.text = "";
         if (arrnum == 0){
             gamename.text = "에임 마스터즈";
-            if (MovinTarget.AIM_SaveScore == 0){
+            if (gameoverscene.AIM_SaveScore == 0){
                 Scoretext.text = "아직 기록이 없습니다.";
                 Scoretext2.text = "명중률 : 기록이 없습니다.";
             }
-            else if (MovinTarget.AIM_SaveScore != 0){
-                Scoretext.text = MovinTarget.AIM_SaveScore.ToString() + "점";
-                Scoretext2.text="명중률 : "+MovinTarget.AIM_accuracyRateScore.ToString("F1")+"%";
+            else if (gameoverscene.AIM_SaveScore != 0){
+                Scoretext.text = gameoverscene.AIM_SaveScore.ToString() + "점";
+                Scoretext2.text="명중률 : "+gameoverscene.AIM_accuracyRateScore.ToString("F1")+"%";
             }
         }
         if (arrnum == 1) gamename.text = "한붓그리기";
@@ -129,6 +129,13 @@ public class GameSelectScript : MonoBehaviour
         }
         if (arrnum == 5){
             gamename.text = "비벼비벼비빔밥";
+            if(BI_ButtonManager.BI_SavePoint == 0) { Scoretext.text = "아직 기록이 없습니다."; }
+            else if(BI_ButtonManager.BI_SavePoint != 0){
+                if (BI_ButtonManager.BI_SavePoint > 5)
+                    Scoretext.text = "비빔밥의 맛은 환상적이다!";
+                else if (BI_ButtonManager.BI_SavePoint < 5)
+                    Scoretext.text = "비빔밥의 맛은 충격적이다...!";
+            }
         }
         if (arrnum == 6) gamename.text = "테트리스";
         if (arrnum == 7){
