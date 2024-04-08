@@ -22,22 +22,23 @@ public class SelScr3 : MonoBehaviour
         numNow = 0;
         numTemp = 1;
 
-        for (int i = 5; i > 1; i--)
+        for (int i = 6; i > 1; i--)
         {
             c_image[i].gameObject.SetActive(false);
         }
 
         linkedNum = new List<List<int>>();
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < 7; i++)
         {
             linkedNum.Add(new List<int>());
         }
-        linkedNum[0] = new List<int> { 1, 2 };
-        linkedNum[1] = new List<int> { 0, 2, 3, 4 };
-        linkedNum[2] = new List<int> { 0, 1, 4, 5 };
-        linkedNum[3] = new List<int> { 1, 4 };
-        linkedNum[4] = new List<int> { 1, 2, 3, 5 };
-        linkedNum[5] = new List<int> { 2, 4 };
+        linkedNum[0] = new List<int> { 1, 2, 3, 4 };
+        linkedNum[1] = new List<int> { 0, 4 };
+        linkedNum[2] = new List<int> { 0, 4, 5, 6 };
+        linkedNum[3] = new List<int> { 0, 2, 4, 6 };
+        linkedNum[4] = new List<int> { 0, 1, 3, 6 };
+        linkedNum[5] = new List<int> { 2, 6 };
+        linkedNum[6] = new List<int> { 2, 3, 4, 5 };
 
         finNum = new List<List<int>>();
     }
