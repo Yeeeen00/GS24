@@ -31,6 +31,7 @@ TagManager:
   - Input2
   - input3
   - GameOver
+  - eventPop
   layers:
   - Default
   - TransparentFX
