@@ -28,7 +28,7 @@ public class GameSelectScript : MonoBehaviour
     public void StartBtnclick(){
         BtnClickSound.IsBtnClick = true;
         if(arrnum==0) SceneManager.LoadScene("Ai_gamestart");
-        //if(arrnum==1)
+        if (arrnum == 1) SceneManager.LoadScene("main_Eu");
         if(arrnum==2) SceneManager.LoadScene("Level01");
         if(arrnum==3) SceneManager.LoadScene("GomulgaWars");
         if(arrnum==4) SceneManager.LoadScene("Racing");
@@ -205,6 +205,8 @@ public class GameSelectScript : MonoBehaviour
                     SceneManager.LoadScene("Level01");
                 if (clickBtnObject.name == "TE")
                     SceneManager.LoadScene("Tetris");
+                if((clickBtnObject.name =="HAN"))
+                    SceneManager.LoadScene("main_Eu");
             }
         }
     }
