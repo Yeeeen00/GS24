@@ -15,10 +15,12 @@ public class BtnOnClick : MonoBehaviour
     private void Update()
     {
         if (IsSettingMove==true){
-            GameObject.Find(Panelname).transform.localPosition = Vector3.MoveTowards(GameObject.Find(Panelname).transform.localPosition, new Vector3(0,0,0),Time.deltaTime * speed);
+            GameObject.Find(Panelname).transform.localPosition = Vector3.MoveTowards(GameObject.Find(Panelname).transform.localPosition, 
+                new Vector3(0,0,0),Time.deltaTime * speed);
         }
         if (IsSettingMove==false){
-            GameObject.Find(Panelname).transform.localPosition = Vector3.MoveTowards(GameObject.Find(Panelname).transform.localPosition, new Vector3(0, Pos, 0) , Time.deltaTime * speed);
+            GameObject.Find(Panelname).transform.localPosition = Vector3.MoveTowards(GameObject.Find(Panelname).transform.localPosition, 
+                new Vector3(0, Pos, 0) , Time.deltaTime * speed);
         }
         
     }

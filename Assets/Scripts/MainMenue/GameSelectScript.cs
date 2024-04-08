@@ -1,5 +1,4 @@
 using Match3;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -34,7 +33,7 @@ public class GameSelectScript : MonoBehaviour
         if(arrnum==3) SceneManager.LoadScene("GomulgaWars");
         if(arrnum==4) SceneManager.LoadScene("Racing");
         if(arrnum==5) SceneManager.LoadScene("BIBIMBAB");
-        //if(arrnum==6)
+        if(arrnum==6) SceneManager.LoadScene("Tetris");
         if(arrnum==7) SceneManager.LoadScene("BlockCode");
     }
     public void DeveloperButton()
@@ -137,7 +136,17 @@ public class GameSelectScript : MonoBehaviour
                     Scoretext.text = "비빔밥의 맛은 충격적이다...!";
             }
         }
-        if (arrnum == 6) gamename.text = "테트리스";
+        if (arrnum == 6)
+        {
+            gamename.text = "테트리스";
+            if(GameOver.Te_SaveScore==0){
+                Scoretext.text = "아직 기록이 없습니다.";
+            }
+            else if(GameOver.Te_SaveScore!=0)
+            {
+                Scoretext.text=GameOver.Te_SaveScore.ToString() + "점";
+            }
+        }
         if (arrnum == 7){
             gamename.text = "야,너도할수있다!"+"\n"+ "도전! 특급 블록코딩" + "\n" +"~ 실전편 ~";
             if (score.B_SaveScore == 0)
@@ -194,6 +203,8 @@ public class GameSelectScript : MonoBehaviour
                     SceneManager.LoadScene("BIBIMBAB");
                 if(clickBtnObject.name =="CA")
                     SceneManager.LoadScene("Level01");
+                if (clickBtnObject.name == "TE")
+                    SceneManager.LoadScene("Tetris");
             }
         }
     }
