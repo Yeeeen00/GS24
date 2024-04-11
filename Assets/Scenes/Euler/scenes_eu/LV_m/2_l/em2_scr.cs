@@ -10,11 +10,11 @@ public class em2_scr : MonoBehaviour
     public List<Image> objects = new List<Image>();
     [SerializeField] private GameObject tObj;
     private List<GameObject> lineObjects;
-    public bool isOn;
+    public static bool isOn;
 
     private void Awake()
     {
-        em2_scr.instance = this; 
+        em2_scr.instance = this;
     }
     void Start()
     {
@@ -43,47 +43,53 @@ public class em2_scr : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            if(isOn) 
-            { 
+            if (isOn)
+            {
                 ResetScene();
             }
+        }
+        if (!isOn)
+        {
+            tObj.SetActive(false);
         }
     }
     void ResetScene()
     {
-        SceneManager.LoadScene("main_Eu");
-        /*
-        for (int i = 0; i < 8; i++)
+        for (int i = 0; i < 9; i++)
         {
             lineObjects[i].GetComponent<LineRenderer>().material.color = Color.white;
-        }*/
+        }
     }
 
     void OnCheckIsCleared()
     {
         bool allLinesRed = true;
 
-    foreach (GameObject lineObject in lineObjects)
-    {
-        LineRenderer lineRenderer = lineObject.GetComponent<LineRenderer>();
-        
-        if (lineRenderer.material.color != Color.red)
+        foreach (GameObject lineObject in lineObjects)
         {
-            allLinesRed = false;
-            break;
+            LineRenderer lineRenderer = lineObject.GetComponent<LineRenderer>();
+
+            if (lineRenderer.material.color != Color.red)
+            {
+                allLinesRed = false;
+                break;
+            }
+        }
+
+        if (allLinesRed)
+        {
+            if (stageChoose_e.stClr < 2)
+            {
+                stageChoose_e.stClr = 2;
+            }
+            SceneManager.LoadScene("Euler_t");
+        }
+        else
+        {
+            tObj.SetActive(true);
+            isOn = true;
         }
     }
-
-    if (allLinesRed)
-    {
-        SceneManager.LoadScene("Euler_t");
-    }
-    else
-    {
-        tObj.SetActive(true);
-        isOn = true;
-    }
-}
 
     void changeColor(int n1, int n2)
     {

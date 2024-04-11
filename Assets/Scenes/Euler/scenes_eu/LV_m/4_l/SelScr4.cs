@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class SelScr2 : MonoBehaviour
+public class SelScr4 : MonoBehaviour
 {
     public delegate void IntValuesDelegate(int value1, int value2);
     public static event IntValuesDelegate colorFinLine;
@@ -22,22 +22,23 @@ public class SelScr2 : MonoBehaviour
         numNow = 0;
         numTemp = 1;
 
-        for (int i = 5; i > 1; i--)
+        for (int i = 6; i > 1; i--)
         {
             c_image[i].gameObject.SetActive(false);
         }
 
         linkedNum = new List<List<int>>();
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < 7; i++)
         {
             linkedNum.Add(new List<int>());
         }
-        linkedNum[0] = new List<int> { 1, 2 };
-        linkedNum[1] = new List<int> { 0, 2, 3, 4 };
-        linkedNum[2] = new List<int> { 0, 1, 4, 5 };
-        linkedNum[3] = new List<int> { 1, 4 };
-        linkedNum[4] = new List<int> { 1, 2, 3, 5 };
-        linkedNum[5] = new List<int> { 2, 4 };
+        linkedNum[0] = new List<int> { 1, 4 };
+        linkedNum[1] = new List<int> { 0, 2, 4, 5 };
+        linkedNum[2] = new List<int> { 1, 3, 4 };
+        linkedNum[3] = new List<int> { 2, 5 };
+        linkedNum[4] = new List<int> { 0, 1, 2, 5, 6 };
+        linkedNum[5] = new List<int> { 1, 3, 4 };
+        linkedNum[6] = new List<int> { 4, 5 };
 
         finNum = new List<List<int>>();
     }
@@ -66,18 +67,18 @@ public class SelScr2 : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            if (em2_scr.isOn)
+            if (em4_scr.isOn)
             {
                 numNow = 0;
                 numTemp = 1;
 
-                for (int i = 5; i > 1; i--)
+                for (int i = 6; i > 1; i--)
                 {
                     c_image[i].gameObject.SetActive(false);
                 }
 
                 finNum = new List<List<int>>();
-                em2_scr.isOn = false;
+                em4_scr.isOn = false;
             }
 
             c_image[numNow].gameObject.SetActive(false);

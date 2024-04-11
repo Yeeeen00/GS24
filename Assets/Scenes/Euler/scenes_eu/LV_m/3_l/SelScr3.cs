@@ -67,6 +67,20 @@ public class SelScr3 : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return))
         {
+            if (em3_scr.isOn)
+            {
+                numNow = 0;
+                numTemp = 1;
+
+                for (int i = 6; i > 1; i--)
+                {
+                    c_image[i].gameObject.SetActive(false);
+                }
+
+                finNum = new List<List<int>>();
+                em3_scr.isOn = false;
+            }
+
             c_image[numNow].gameObject.SetActive(false);
             finNum.Add(new List<int> { numNow, numTemp });
             c_image[numTemp].gameObject.SetActive(true);

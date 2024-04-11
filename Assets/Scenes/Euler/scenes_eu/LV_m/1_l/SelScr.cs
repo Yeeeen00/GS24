@@ -65,6 +65,20 @@ public class SelScr : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return))
         {
+            if (em1_scr.isOn)
+            {
+                numNow = 0;
+                numTemp = 1;
+
+                for (int i = 4; i > 1; i--)
+                {
+                    c_image[i].gameObject.SetActive(false);
+                }
+
+                finNum = new List<List<int>>();
+                em1_scr.isOn = false;
+            }
+
             c_image[numNow].gameObject.SetActive(false);
             finNum.Add(new List<int> { numNow, numTemp });
             c_image[numTemp].gameObject.SetActive(true);
@@ -125,7 +139,6 @@ public class SelScr : MonoBehaviour
         {
             if ((linkedNum[num][i] < t) && !isFin(numNow, linkedNum[num][i]))
             {
-                UnityEngine.Debug.Log(linkedNum[num][i]);
                 return i;
             }
         }

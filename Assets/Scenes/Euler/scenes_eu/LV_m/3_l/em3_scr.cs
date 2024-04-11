@@ -10,16 +10,16 @@ public class em3_scr : MonoBehaviour
     public List<Image> objects = new List<Image>();
     [SerializeField] private GameObject tObj;
     private List<GameObject> lineObjects;
-    public bool isOn;
+    public static bool isOn;
 
     private void Awake()
     {
-        em3_scr.instance = this; 
+        em3_scr.instance = this;
     }
     void Start()
     {
-        SelScr2.colorFinLine += changeColor;
-        SelScr2.checkIsCleared += OnCheckIsCleared;
+        SelScr3.colorFinLine += changeColor;
+        SelScr3.checkIsCleared += OnCheckIsCleared;
         tObj.SetActive(false);
         lineObjects = new List<GameObject>();
         isOn = false;
@@ -46,47 +46,54 @@ public class em3_scr : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            if(isOn) 
-            { 
+            if (isOn)
+            {
                 ResetScene();
             }
+        }
+        if (!isOn)
+        {
+            tObj.SetActive(false);
         }
     }
     void ResetScene()
     {
-        SceneManager.LoadScene("main_Eu");
-        /*
-        for (int i = 0; i < 8; i++)
+        for (int i = 0; i < 12; i++)
         {
             lineObjects[i].GetComponent<LineRenderer>().material.color = Color.white;
-        }*/
+        }
     }
 
     void OnCheckIsCleared()
     {
         bool allLinesRed = true;
 
-    foreach (GameObject lineObject in lineObjects)
-    {
-        LineRenderer lineRenderer = lineObject.GetComponent<LineRenderer>();
-        
-        if (lineRenderer.material.color != Color.red)
+        foreach (GameObject lineObject in lineObjects)
         {
-            allLinesRed = false;
-            break;
+            LineRenderer lineRenderer = lineObject.GetComponent<LineRenderer>();
+
+            if (lineRenderer.material.color != Color.red)
+            {
+                allLinesRed = false;
+                break;
+            }
+        }
+
+        if (allLinesRed)
+        {
+
+            if (stageChoose_e.stClr < 3)
+            {
+                stageChoose_e.stClr = 3;
+            }
+            SceneManager.LoadScene("Euler_t");
+        }
+        else
+        {
+            tObj.SetActive(true);
+            isOn = true;
         }
     }
-
-    if (allLinesRed)
-    {
-        SceneManager.LoadScene("Euler_t");
-    }
-    else
-    {
-        tObj.SetActive(true);
-        isOn = true;
-    }
-}
 
     void changeColor(int n1, int n2)
     {

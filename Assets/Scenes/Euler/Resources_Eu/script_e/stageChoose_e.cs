@@ -4,10 +4,12 @@ using UnityEngine.SceneManagement;
 
 public class stageChoose_e : MonoBehaviour
 {
-    public int stClr = 0;
+    public static int stClr;
     public int numNow;
+    public static stageChoose_e inst;
     [SerializeField] private List<UnityEngine.UI.Image> p_image = new List<UnityEngine.UI.Image>();
     [SerializeField] private List<UnityEngine.UI.Image> c_image = new List<UnityEngine.UI.Image>();
+
 
     void Start()
     {
@@ -73,7 +75,7 @@ public class stageChoose_e : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Quit();
+            SceneManager.LoadScene("main_Eu");
         }
     }
 

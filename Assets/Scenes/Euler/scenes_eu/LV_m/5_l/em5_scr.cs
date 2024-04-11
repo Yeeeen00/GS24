@@ -2,11 +2,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
-using static SelScr;
+using static SelScr5;
 
-public class em1_scr : MonoBehaviour
+public class em5_scr : MonoBehaviour
 {
-    public static em1_scr instance;
+    public static em5_scr instance;
     public List<Image> objects = new List<Image>();
     [SerializeField] private GameObject tObj;
     private List<GameObject> lineObjects;
@@ -14,16 +14,16 @@ public class em1_scr : MonoBehaviour
 
     private void Awake()
     {
-        em1_scr.instance = this;
+        em5_scr.instance = this; 
     }
     void Start()
     {
-        SelScr.colorFinLine += changeColor;
-        SelScr.checkIsCleared += OnCheckIsCleared;
+        SelScr5.colorFinLine += changeColor;
+        SelScr5.checkIsCleared += OnCheckIsCleared;
         tObj.SetActive(false);
         lineObjects = new List<GameObject>();
         isOn = false;
-        for (int i = 0; i < 8; i++)
+        for (int i = 0; i < 14; i++)
         {
             drawStart(i);
         }
@@ -32,18 +32,24 @@ public class em1_scr : MonoBehaviour
     void Update()
     {
         drawUpdate(0, 0, 1);
-        drawUpdate(1, 0, 2);
-        drawUpdate(2, 0, 3);
-        drawUpdate(3, 1, 2);
-        drawUpdate(4, 1, 3);
-        drawUpdate(5, 2, 4);
-        drawUpdate(6, 3, 2);
-        drawUpdate(7, 3, 4);
+        drawUpdate(1, 1, 2);
+        drawUpdate(2, 1, 4);
+        drawUpdate(3, 2, 4);
+        drawUpdate(4, 0, 2);
+        drawUpdate(5, 0, 6);
+        drawUpdate(6, 4, 6);
+        drawUpdate(7, 4, 5);
+        drawUpdate(8, 5, 6);
+        drawUpdate(9, 2, 5);
+        drawUpdate(10, 6, 3);
+        drawUpdate(11, 5, 3);
+        drawUpdate(12, 6, 7);
+        drawUpdate(13, 1, 7);
 
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            if (isOn)
-            {
+            if(isOn) 
+            { 
                 ResetScene();
             }
         }
@@ -54,9 +60,7 @@ public class em1_scr : MonoBehaviour
     }
     void ResetScene()
     {
-        //SceneManager.LoadScene("main_Eu");
-        
-        for (int i = 0; i < 8; i++)
+        for (int i = 0; i < 14; i++)
         {
             lineObjects[i].GetComponent<LineRenderer>().material.color = Color.white;
         }
@@ -66,35 +70,35 @@ public class em1_scr : MonoBehaviour
     {
         bool allLinesRed = true;
 
-        foreach (GameObject lineObject in lineObjects)
+    foreach (GameObject lineObject in lineObjects)
+    {
+        LineRenderer lineRenderer = lineObject.GetComponent<LineRenderer>();
+        
+        if (lineRenderer.material.color != Color.red)
         {
-            LineRenderer lineRenderer = lineObject.GetComponent<LineRenderer>();
-
-            if (lineRenderer.material.color != Color.red)
-            {
-                allLinesRed = false;
-                break;
-            }
-        }
-
-        if (allLinesRed)
-        {
-            if(stageChoose_e.stClr < 1)
-            {
-                stageChoose_e.stClr = 1;
-            }
-            SceneManager.LoadScene("Euler_t");
-        }
-        else
-        {
-            tObj.SetActive(true);
-            isOn = true;
+            allLinesRed = false;
+            break;
         }
     }
 
+    if (allLinesRed)
+        {
+            if (stageChoose_e.stClr < 5)
+            {
+                stageChoose_e.stClr = 5;
+            }
+            SceneManager.LoadScene("Euler_t");
+        }
+    else
+    {
+        tObj.SetActive(true);
+        isOn = true;
+    }
+}
+
     void changeColor(int n1, int n2)
     {
-        for (int i = 0; i < 8; i++)
+        for (int i = 0; i < 14; i++)
         {
             if ((lineObjects[i].GetComponent<LineRenderer>().GetPosition(0) == objects[n1].rectTransform.position && lineObjects[i].GetComponent<LineRenderer>().GetPosition(1) == objects[n2].rectTransform.position) || (lineObjects[i].GetComponent<LineRenderer>().GetPosition(0) == objects[n2].rectTransform.position && lineObjects[i].GetComponent<LineRenderer>().GetPosition(1) == objects[n1].rectTransform.position))
             {

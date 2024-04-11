@@ -2,11 +2,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
-using static SelScr;
+using static SelScr4;
 
-public class em1_scr : MonoBehaviour
+public class em4_scr : MonoBehaviour
 {
-    public static em1_scr instance;
+    public static em4_scr instance;
     public List<Image> objects = new List<Image>();
     [SerializeField] private GameObject tObj;
     private List<GameObject> lineObjects;
@@ -14,16 +14,16 @@ public class em1_scr : MonoBehaviour
 
     private void Awake()
     {
-        em1_scr.instance = this;
+        em4_scr.instance = this;
     }
     void Start()
     {
-        SelScr.colorFinLine += changeColor;
-        SelScr.checkIsCleared += OnCheckIsCleared;
+        SelScr4.colorFinLine += changeColor;
+        SelScr4.checkIsCleared += OnCheckIsCleared;
         tObj.SetActive(false);
         lineObjects = new List<GameObject>();
         isOn = false;
-        for (int i = 0; i < 8; i++)
+        for (int i = 0; i < 11; i++)
         {
             drawStart(i);
         }
@@ -32,13 +32,16 @@ public class em1_scr : MonoBehaviour
     void Update()
     {
         drawUpdate(0, 0, 1);
-        drawUpdate(1, 0, 2);
-        drawUpdate(2, 0, 3);
-        drawUpdate(3, 1, 2);
-        drawUpdate(4, 1, 3);
-        drawUpdate(5, 2, 4);
-        drawUpdate(6, 3, 2);
-        drawUpdate(7, 3, 4);
+        drawUpdate(1, 1, 2);
+        drawUpdate(2, 1, 4);
+        drawUpdate(3, 0, 4);
+        drawUpdate(4, 1, 5);
+        drawUpdate(5, 2, 3);
+        drawUpdate(6, 3, 5);
+        drawUpdate(7, 4, 2);
+        drawUpdate(8, 5, 4);
+        drawUpdate(9, 6, 4);
+        drawUpdate(10, 6, 5);
 
         if (Input.GetKeyDown(KeyCode.Return))
         {
@@ -54,9 +57,7 @@ public class em1_scr : MonoBehaviour
     }
     void ResetScene()
     {
-        //SceneManager.LoadScene("main_Eu");
-        
-        for (int i = 0; i < 8; i++)
+        for (int i = 0; i < 11; i++)
         {
             lineObjects[i].GetComponent<LineRenderer>().material.color = Color.white;
         }
@@ -79,9 +80,9 @@ public class em1_scr : MonoBehaviour
 
         if (allLinesRed)
         {
-            if(stageChoose_e.stClr < 1)
+            if (stageChoose_e.stClr < 4)
             {
-                stageChoose_e.stClr = 1;
+                stageChoose_e.stClr = 4;
             }
             SceneManager.LoadScene("Euler_t");
         }
@@ -94,7 +95,7 @@ public class em1_scr : MonoBehaviour
 
     void changeColor(int n1, int n2)
     {
-        for (int i = 0; i < 8; i++)
+        for (int i = 0; i < 11; i++)
         {
             if ((lineObjects[i].GetComponent<LineRenderer>().GetPosition(0) == objects[n1].rectTransform.position && lineObjects[i].GetComponent<LineRenderer>().GetPosition(1) == objects[n2].rectTransform.position) || (lineObjects[i].GetComponent<LineRenderer>().GetPosition(0) == objects[n2].rectTransform.position && lineObjects[i].GetComponent<LineRenderer>().GetPosition(1) == objects[n1].rectTransform.position))
             {
