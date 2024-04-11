@@ -75,6 +75,10 @@ public class BtnOnClick : MonoBehaviour
         IsSettingMove = true;
         GameObject.Find("ButtonManager").GetComponent<GameSelectScript>().DeveloperButton();
     }
+    public void DeveloperButtonClick()
+    {
+        
+    }
     void deley()
     {
         settingpanel.SetActive(false);
