@@ -125,6 +125,10 @@ public class GameSelectScript : MonoBehaviour
         }
         if (arrnum == 4){
             gamename.text = "À®";
+            if (checkpiints.SaveTimer == 100000f)
+                Scoretext.text = "¾ÆÁ÷ ±â·ÏÀÌ ¾ø½À´Ï´Ù.";
+            if(checkpiints.SaveTimer != 100000f)
+                Scoretext.text=checkpiints.SaveTimer.ToString("F3")+"ÃÊ ¿ÏÁÖ";
         }
         if (arrnum == 5){
             gamename.text = "ºñº­ºñº­ºñºö¹ä";
