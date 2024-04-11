@@ -13,18 +13,33 @@ public class Timer : MonoBehaviour
     [Header("Timer Settings")]
     public float currentTime;
 
-    GameObject startLine;
+    public GameObject startLine;
+
+    bool isStarted = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+      
     }
 
     // Update is called once per frame
     void Update()
     {
-        currentTime += Time.deltaTime;
-        timeText.text = currentTime.ToString("0.000");
+        if (isStarted == true)
+        {
+            currentTime += Time.deltaTime;
+            timeText.text = currentTime.ToString("0.000");
+        }
+    }
+
+    public void raceStart()
+    {
+        isStarted = true;
+    }
+
+    public void raceEnd()
+    {
+        isStarted=false;
     }
 }
