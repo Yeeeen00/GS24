@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Playables;
 public class TetrisBlock : MonoBehaviour
@@ -12,6 +13,7 @@ public class TetrisBlock : MonoBehaviour
     private static Transform[,] grid = new Transform[Width, Height];
 
     bool isGameOver;
+    bool isHold = false;
 
     // other commponent ----------
     TouchButtons touchButtons;
@@ -49,6 +51,9 @@ public class TetrisBlock : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space)) // 터치
             dropBlock();
 
+        if (Input.GetKeyDown(KeyCode.C))
+            holdBlock();
+
         //================== 터치일 경우
         if (touchButtons)
         {
@@ -64,6 +69,36 @@ public class TetrisBlock : MonoBehaviour
 
             if (touchButtons.MyCommand == Command.Down)
                 dropBlock();
+        }
+    }
+
+    void holdBlock()
+    {
+        if (isHold)
+            return;
+        else
+        {
+            if (spawTetromino.isFirstHold)
+            {
+                spawTetromino.HoldTetromino = gameObject;
+                spawTetromino.HoldTetromino.GetComponent<TetrisBlock>().enabled = false;
+                transform.position = new Vector3(-6f, 10f, 0);
+
+                spawTetromino.isFirstHold = false;
+
+                if (!isGameOver)
+                    spawTetromino.NewTetromino();
+            }
+            else
+            {
+                spawTetromino.HoldTetromino.GetComponent<TetrisBlock>().enabled = true;
+                spawTetromino.HoldTetromino.transform.position = transform.position;
+                transform.position = new Vector3(-6f, 10f, 0);
+
+                enabled = false;
+                spawTetromino.HoldTetromino = gameObject;
+            }
+            isHold = true;
         }
     }
 
@@ -120,7 +155,7 @@ public class TetrisBlock : MonoBehaviour
     }
     void dropBlock()
     {
-        FallTime = 0;
+        FallTime = -1;
     }
 
     /// <sammary>

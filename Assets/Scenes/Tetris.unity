@@ -721,6 +721,8 @@ MonoBehaviour:
   - {fileID: 8055256411216431411, guid: 4fc91343cd6da024b9fd110fd0615218, type: 3}
   - {fileID: 4668185192127400928, guid: 7e8a6a2029753554ebd354c11fbee0c1, type: 3}
   ListTetrominoes: []
+  isFirstHold: 1
+  HoldTetromino: {fileID: 0}
 --- !u!4 &404605174
 Transform:
   m_ObjectHideFlags: 0
@@ -1965,7 +1967,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: ffce6173271337b4585433b946cc3a15, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -5,6 +5,8 @@ public class SpawnTetromino : MonoBehaviour
 {
     public GameObject[] Tetrominoes;
     public List<GameObject> ListTetrominoes;
+    public bool isFirstHold = true;
+    public GameObject HoldTetromino;
     GameObject nextSpawn;
     GameObject targetSpawn;
     bool isFirst = true;
@@ -51,7 +53,7 @@ public class SpawnTetromino : MonoBehaviour
             nextSpawn = Instantiate(Tetrominoes[Random.Range(0, Tetrominoes.Length)], new Vector3(15.5f, 8f, 1f), Quaternion.identity);
             nextSpawn.GetComponent<TetrisBlock>().enabled = false;
             nextSpawn.transform.localScale = new Vector3(1f, 1f, 1f);
-
+            
             destoroyCheck();
         }
     }
