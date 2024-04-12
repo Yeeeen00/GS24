@@ -77,7 +77,7 @@ public class BI_ButtonManager : MonoBehaviour
     public void NextBtnOnclick()
     {
         Reset();
-        if (Count == 0)
+        if (Count == 0)//고명
         {
             isRiceMaking = false;
             MakeRice.SetActive(false);
@@ -87,7 +87,7 @@ public class BI_ButtonManager : MonoBehaviour
             SauceMake = true;
             Count++;
         }
-        else if (Count == 1)
+        else if (Count == 1)//소스
         {
             Gomyung.SetActive(false);
             MakeSauce.SetActive(true);
@@ -97,15 +97,11 @@ public class BI_ButtonManager : MonoBehaviour
             SauceMake = false;
             Count++;
         }
-        else if (Count == 2)
+        else if (Count == 2)//결과
         {
-            Count++;
-        }
-        if (Count >= 3)
-        {
-            if (Point < 5)
+            if (Point <= 5)
                 SceneManager.LoadScene("BibimbabFail");
-            else if (Point > 5)
+            if (Point > 5)
                 SceneManager.LoadScene("BibimbabEnding");
             if (Point > BI_SavePoint)
                 BI_SavePoint = Point;
