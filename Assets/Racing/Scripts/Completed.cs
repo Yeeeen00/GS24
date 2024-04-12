@@ -10,7 +10,7 @@ public class Completed : MonoBehaviour
     public Text Recordtxt;
     private void Update()
     {
-        NewRecordtxt.text = "신기록 : " + checkpiints.SaveTimer.ToString("F3");
+        NewRecordtxt.text = "최고 기록 : " + checkpiints.SaveTimer.ToString("F3");
         Recordtxt.text = "기록 : " + GameObject.Find("TimeManager").GetComponent<Timer>().currentTime.ToString("F3");
     }
     public void ReStartBtn()

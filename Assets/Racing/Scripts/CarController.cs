@@ -22,6 +22,8 @@ public class CarController : MonoBehaviour
     //ÄÄÆ÷³ÍÆ®
     Rigidbody2D carRigidbody2D;
 
+    public GameObject particle;
+
     //Awake
     private void Awake()
     {
@@ -30,17 +32,24 @@ public class CarController : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
-    
+
     void Update()
     {
-        
+        if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.UpArrow))
+            particle.SetActive(false);
+        else
+        {
+            particle.SetActive(true);
+        }
     }
 
     private void FixedUpdate()
     {
+
+
         ApplyEngineForce();
 
         KillorthongonalVelocity();
