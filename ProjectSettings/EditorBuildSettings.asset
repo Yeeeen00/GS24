@@ -47,7 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Euler/scenes_eu/main_Eu.unity
     guid: f3dbac7a5c6becc4d998bc6976b7e00c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Euler/LV_m/1_em.unity
     guid: 1a2a3d604d067b648927ed6866d182df
   - enabled: 1
@@ -62,4 +62,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Euler/scenes_eu/LV_m/3_l/3_em.unity
     guid: b10d121107ad2584ca06b88c2cce6714
+  - enabled: 1
+    path: Assets/Scenes/Developerpage.unity
+    guid: d30d26c506238e14eab9fcda879384a4
   m_configObjects: {}
