@@ -45,7 +45,7 @@ public class BtnOnClick : MonoBehaviour
     }
     public void SettingBtnOnClick()
     {
-        Pos = 980;
+        Pos = 1200;
         Panelname = "Setting";
         BtnClickSound.IsBtnClick = true;
         settingpanel.SetActive(true);
@@ -75,9 +75,14 @@ public class BtnOnClick : MonoBehaviour
         IsSettingMove = true;
         GameObject.Find("ButtonManager").GetComponent<GameSelectScript>().DeveloperButton();
     }
-    public void DeveloperButtonClick()
+    public void ExplainBtnOnclick()
     {
-        
+        Pos = 1100;
+        Panelname = "ExUI";
+        BtnClickSound.IsBtnClick = true;
+        settingpanel.SetActive(true);
+        IsSettingMove = true;
+        GameObject.Find("ButtonManager").GetComponent<GameSelectScript>().ExPlainFunc();
     }
     void deley()
     {

@@ -8,6 +8,8 @@ using UnityEngine.UI;
 public class GameSelectScript : MonoBehaviour
 {
     GameObject clickBtnObject;
+    public Text Extxt;
+    public Text Game_Name;
     public Text gamename;
     public Text Scoretext;
     public Text Scoretext2;
@@ -36,9 +38,51 @@ public class GameSelectScript : MonoBehaviour
         if(arrnum==6) SceneManager.LoadScene("Tetris");
         if(arrnum==7) SceneManager.LoadScene("BlockCode");
     }
+    public void ExPlainFunc()
+    {
+        if (arrnum == 0)
+        {
+            Game_Name.text = "에임 마스터즈";
+            Extxt.text = "마우스를 이용하여 랜덤하게 등장하는 "+"\n\n"+ "과녁을 맞춰라!! 잘못클릭하면 명중률이"+"\n\n"+" 떨어지고 과녁의 위치가 또 바뀌니 주의!!";
+        }
+        if (arrnum == 1)
+        {
+            Game_Name.text = "한붓그리기";
+            Extxt.text = "퍼즐장르의 두뇌게임!"+"\n\n"+ "키보드 화살표키로 가고싶은 점을 선택한뒤"+"\n\n"+ "Enter를 눌러 점끼리 연결시켜라!!" + "\n\n"+ "한번 이어진 점으로는 다시 이동할수 없다! " + "\n\n"+"모든점을 연결하라!!";
+        }
+        if (arrnum == 2)
+        {
+            Game_Name.text = "카페인 어택";
+            Extxt.text = "카페인 음료를 사수하라!!"+"\n\n"+"똑같은 음료를 한줄로 맞추면 "+"\n\n"+"점수를 얻는다!! 마우스로 직접 옮겨서"+"\n\n"+"횟수안에 최대한 많은 점수를 휙득하라!!";
+        }
+        if (arrnum == 3)
+        {
+            Game_Name.text = "고물가 워즈";
+            Extxt.text = "광고에 맨날 나오는 바로 그 게임!"+"\n\n"+"왼쪽 아래 캐릭터를 본인보다 숫자가 작은"+"\n\n"+"물건으로 가져다 놓아 공격하자!"+"\n\n"+"힘을 키워서 모든 물건을 없에버리자!!!";
+        }
+        if (arrnum == 4)
+        {
+            Game_Name.text = "윙";
+            Extxt.text = "최대한 빠른 시간안에 결승점을 통과하라!!"+"\n\n"+"키보드 화살표키로 조작하여 플레이하는 "+"\n\n"+"레이실 게임!! 빠르게 한바퀴를 돌면 성공!!";
+        }
+        if (arrnum == 5)
+        {
+            Game_Name.text = "비벼비벼비빔밥";
+            Extxt.text = "추억의 고향만두 게임을 비빔밥 버전으로!!"+"\n\n"+"원하는 재료를 넣어서 최고의 비빔밥을"+"\n\n"+" 완성시키자!!";
+        }
+        if (arrnum == 6)
+        {
+            Game_Name.text = "테트리스";
+            Extxt.text = "편의의 각종물품들로 플레이하는"+"\n\n"+"테트리스!! 키보드 화살표 좌우키로" +"\n\n" +"조작가능하고 화살표 위로가기키를 누르면"+"\n\n"+"회전한다! C키를 누를시 블럭 저장이 "+"\n\n"+"가능하고 SpaceBar누르면 바로 떨어진다!!";
+        }
+        if (arrnum == 7)
+        {
+            Game_Name.text = "야,너도할수있다!" + "\n" + "도전! 특급 블록코딩" + "\n" + "~ 실전편 ~";
+            Extxt.text = "여러분도 할수있습니다."+"\n\n"+"주어진 상황을 블록코딩을 이용하여"+"\n\n"+"해결하라!! 문제가 어렵다면 게임에"+"\n\n"+"나와있는 답지를 확인할수있다!";
+        }
+    }
     public void DeveloperButton()
     {
-        BtnClickSound.IsBtnClick = true;
         if(arrnum == 0)
         {
             name1.text = "박태환";
@@ -90,7 +134,6 @@ public class GameSelectScript : MonoBehaviour
     }
     public void ReCordButton()
     {
-        BtnClickSound.IsBtnClick = true;
         Scoretext.text = "";
         Scoretext2.text = "";
         if (arrnum == 0){
