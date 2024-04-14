@@ -51,10 +51,6 @@ public class main_e : MonoBehaviour
 
     void Quit()
     {
-        #if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false;
-        #else
-            Application.Quit();
-        #endif
+        SceneManager.LoadScene("GameSelectScene");
     }
 }
